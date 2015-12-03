@@ -1,0 +1,47 @@
+html { font-size: 62.5%; }
+
+$font-base: Helvetica, sans-serif;
+$font-alt:  Georgia, serif;
+$image-path: '/images/';
+
+$color-1: blue;
+
+$color-bg:          #fff;
+$color-text:        $color-1;
+$color-text-light:  #fff;
+
+$color-default: #3d9991;
+$color-default-darken: darken($color-default, 20%);
+
+$color-footer: #949494;
+
+/* MENU MOBILE */
+
+$color-menu-home-li: #7eb6b0;
+$color-menu-home-li-lighten: lighten($color-menu-home-li, 20%);
+
+$color-menu-home:#356570;
+$color-menu-home-lighten: lighten($color-menu-home, 40%);
+
+$color-menu-3:#081e2b;
+$color-menu-3-lighten:lighten($color-default, 20%);
+
+$color-cancel: #bc2121;
+$color-link: #ffffff;
+$color-link-hover: #3d9991;
+
+$color-border: #ddd;
+
+$color-facebook:    #3b5998;
+$color-twitter:     #00c8fa;
+$color-pinterest:   #cb2027;
+$color-linkedin:    #0073b2;
+$color-google-plus: #dd4b39;
+
+$white: #fff;
+$black: #000;
+
+$grid-gutter-base:    20px / 2;
+$grid-gutter-tablet:  20px / 2;
+$grid-gutter-desktop: 30px / 2;
+$grid-gutter-wide:    30px / 2;

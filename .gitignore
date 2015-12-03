@@ -1,0 +1,11 @@
+# osx noise
+.DS_Store
+profile
+
+
+# sass
+.sass-cache/*
+
+# gulp
+node_modules/*
+assets/temp/*

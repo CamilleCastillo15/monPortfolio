@@ -1,0 +1,490 @@
+html {
+	box-sizing: border-box;
+}
+
+*, *:before, *:after {
+	box-sizing: inherit;
+	outline: none;
+}
+
+a, a:hover, a:focus, a:active, a:visited {
+	outline: none;
+}
+
+html {
+	text-size-adjust: 100%;
+}
+
+body {
+	background-color: $color-bg;
+	
+	@include font-size(14);
+	font-family: $font-base;
+	color: $color-text;
+
+	
+	&.noscroll {
+		overflow: hidden;
+	}
+}
+
+/* 
+
+########   ##    ##   ########    #######   
+   ##       ##  ##    ##     ##  ##     ##  
+   ##        ####     ##     ##  ##     ##  
+   ##         ##      ########   ##     ##  
+   ##         ##      ##         ##     ##  
+   ##         ##      ##         ##     ##  
+   ##         ##      ##          #######   
+
+ */
+
+.editor-text {
+	color: $color-text;
+
+	p {
+		line-height: 1.3;
+		margin-bottom: 1.5em;
+
+	}
+
+	a {
+		color: $color-link;
+		display: inline-block;
+		border-bottom: 1px solid $color-link;
+
+		transition:
+			color 0.2s ease-in-out,
+			border-color 0.2s ease-in-out;
+
+		.no-touch & {
+			&:hover, &:focus {
+				color: lighten($color-link, 10%);
+				border-color: lighten($color-link, 10%);
+			}
+		}
+	}
+
+	h1 {
+		margin-bottom: 1.5em;
+		font-family: $font-alt;
+		text-transform: uppercase;
+		@include font-size(20);
+		font-weight: 700;
+	}
+
+	h2 {
+		margin-bottom: 1.5em;
+		font-family: $font-alt;
+		@include font-size(16);
+	}
+
+	h3 {
+		margin-bottom: 1em;
+		font-weight: 600;
+	}
+
+	h4 {
+
+	}
+}
+
+.texte {
+			@include font-size(15);
+			color:black;
+			text-align: center;
+			padding: 0 10px 50px;
+			color:#737373;
+			line-height:1.5;
+	}
+
+p.texte_2 {
+			@include font-size(15);
+			color:black;
+			text-align: left;
+			padding: 0 0 31px;
+			color:#737373;
+			line-height:1.5;
+	
+	@include mq($from: mobileLandscape, $until: tablet) {
+        
+        max-width: 360px;
+	    margin: 0 auto;
+	    text-align: center;
+
+    	}
+
+	}
+
+p.texte_3 {
+			@include font-size(15);
+			color:black;
+			text-align: left;
+			padding: 0 0 15px;
+			color:#737373;
+			line-height:1.2;
+	
+	@include mq($from: mobileLandscape, $until: tablet) {
+        
+        max-width: 360px;
+	    margin: 0 auto;
+	    text-align: center;
+
+    	}
+
+	}
+
+.title-span {
+	@include mq($until: mobileLandscape) {
+		display: block;
+	}
+}
+
+/* 
+########   ####  ########   ##         ########    ######    
+   ##       ##      ##      ##         ##         ##    ##   
+   ##       ##      ##      ##         ##         ##         
+   ##       ##      ##      ##         ######      ######    
+   ##       ##      ##      ##         ##               ##   
+   ##       ##      ##      ##         ##         ##    ##   
+   ##      ####     ##      ########   ########    ######    
+*/
+
+.title-lev1 {
+	font-family: Adobe Garamont Pro,serif;
+    color: #4f3248;
+    @include font-size(23);
+    text-align: center;
+    padding: 50px 10px 30px 0;
+}
+
+.title-lev2 {
+	text-transform: uppercase;
+	font-family: Proxima Nova,serif;
+	color: $color-default;
+	padding:38px 0px 16px;
+	@include font-size(19);
+	line-height:1.3;
+
+	@include mq($from: mobileLandscape, $until: tablet) {
+        text-align: center;
+    }
+
+}
+
+.title-lev3 {
+	text-transform: uppercase;
+	font-family: Proxima Nova,serif;
+	color: $color-default;
+	padding:38px 0px 0px;
+	@include font-size(15);
+	line-height:1;
+
+	@include mq($from: mobileLandscape, $until: tablet) {
+        text-align: center;
+    }
+
+}
+
+.title-lev4 {
+	text-transform: uppercase;
+	font-family: Proxima Nova,serif;
+	color: $color-default;
+	// padding:10px 0px 0px;
+	@include font-size(15);
+	line-height:1;
+
+	@include mq($from: mobileLandscape, $until: tablet) {
+        text-align: center;
+    }
+
+}
+
+/* 
+##     ##  ########      ###     ########   ########   ########   
+##     ##  ##           ## ##    ##     ##  ##         ##     ##  
+##     ##  ##          ##   ##   ##     ##  ##         ##     ##  
+#########  ######     ##     ##  ##     ##  ######     ########   
+##     ##  ##         #########  ##     ##  ##         ##   ##    
+##     ##  ##         ##     ##  ##     ##  ##         ##    ##   
+##     ##  ########   ##     ##  ########   ########   ##     ##  
+*/
+
+.header-content{
+	background-repeat: no-repeat;
+    background-image: url(../images/header/photo-top-chalets-savoie_v3.jpg);
+    background-size: cover;
+    width: 100%;
+    padding-top: 75px;
+    background-position: center center;
+
+	@media only screen and (min-width: 650px) and (max-device-width: 768px) {
+	    background-position: 0 -124px;
+	}
+
+	@include mq($until: tablet) {
+        height:276px;
+         padding-top: 93px;
+    }
+
+    @include mq($from: tablet, $until: desktop) {
+         height:276px;
+         padding-top: 93px;
+    }
+
+    @include mq($from: desktop, $until: wide) {
+         height:400px;
+         padding-top: 155px
+    }
+
+	@include mq($from: wide, $until: xwide) {
+         height:450px;
+         padding-top: 180px
+    }
+
+    @include mq($from: xwide) {
+         height:500px;
+         padding-top: 205px;
+    }
+
+}
+
+.header-title {
+	text-align: center;
+    font-family: Adobe Garamont Pro,serif;
+    color: #fff;
+	
+	@include font-size(65);
+
+	 text-shadow: 2px 2px 2px rgba(0,0,0,.3);
+
+	 @include mq($until: tablet) {
+        @include font-size(55);
+    }
+
+}
+
+.row {
+	// background-color: red;
+}
+
+[class^="col"] {
+	// background-color: yellow;
+}
+
+.item {
+	background-color: purple;
+	padding: 0px;
+	color: #fff;
+}
+
+.nav-main {
+	
+	@include mq($until: tablet) {
+		
+	}
+
+	@include mq($from: tablet) {
+		
+	}
+}
+
+/* 
+##     ##     ###     ####  ##    ##   
+###   ###    ## ##     ##   ###   ##   
+#### ####   ##   ##    ##   ####  ##   
+## ### ##  ##     ##   ##   ## ## ##   
+##     ##  #########   ##   ##  ####   
+##     ##  ##     ##   ##   ##   ###   
+##     ##  ##     ##  ####  ##    ##   
+*/
+
+.center-824-max {
+    max-width: 824px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+.center-max-phrase {
+
+	margin: 0 auto;
+    padding: 0 10px;
+    
+    @include mq($until: mobileLandscape) {
+		max-width: 399px;
+	}
+
+	@include mq($from: tablet) {
+		max-width: 600px;
+	}
+
+}
+
+.first-image {
+
+	background-repeat: no-repeat;
+    background-image: url(../images/main/first_img.jpg);
+
+}
+
+.second-image {
+
+	background-repeat: no-repeat;
+    background-image: url(../images/main/second_img.jpg);
+
+}
+
+.third-image {
+
+	background-repeat: no-repeat;
+    background-image: url(../images/main/third_img_v2.jpg);	
+	
+}
+
+.img {
+
+	@include mq($from: mobileLandscape, $until: tablet) {
+        background-position: center;
+    }
+
+	// width:360px;
+	width:100%;
+    height:203px;
+
+}
+
+
+.center-1200-max {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+.button {
+    display: block;
+    max-width: 360px;
+    margin: 0 auto;
+    padding: 15px;
+    text-align: center;
+    color: $color-default;
+    font-weight: 500;
+    // border-radius: 4px;
+    transition: .4s ease-in-out;
+    border: 2px solid $color-default;
+    text-transform: uppercase;
+    font-family: Proxima Nova,serif;
+    @include font-size(15);
+    line-height: 1.2;
+}
+
+.button:hover {
+    background-color: $color-default-darken;
+    color: #fff;
+}
+
+.pad {
+	padding: 0 20px;
+}
+
+.center-column {
+
+	@include mq($from: tablet) {
+        margin-left:33.3%;
+    }
+
+}
+
+
+/* 
+ ######    ####  ########   ########   ########      ###     ########   
+##    ##    ##   ##     ##  ##         ##     ##    ## ##    ##     ##  
+##          ##   ##     ##  ##         ##     ##   ##   ##   ##     ##  
+ ######     ##   ##     ##  ######     ########   ##     ##  ########   
+      ##    ##   ##     ##  ##         ##     ##  #########  ##   ##    
+##    ##    ##   ##     ##  ##         ##     ##  ##     ##  ##    ##   
+ ######    ####  ########   ########   ########   ##     ##  ##     ##  
+*/
+
+/* 
+##     ##  ########   ##    ##   ##     ##  
+###   ###  ##         ###   ##   ##     ##  
+#### ####  ##         ####  ##   ##     ##  
+## ### ##  ######     ## ## ##   ##     ##  
+##     ##  ##         ##  ####   ##     ##  
+##     ##  ##         ##   ###   ##     ##  
+##     ##  ########   ##    ##    #######   
+ */
+
+ul.ul-menu-desktop {
+
+	li:nth-child(2), li:nth-child(3) {
+
+		padding-left:33px;
+
+	}
+
+}
+
+ .menu-desktop {
+
+	font-family: Gotham;
+    font-size: 14px;
+    /* float: right; */
+    top: 41px;
+    width: 290px;
+    text-align: right;
+    right: 40px;
+    position: absolute;
+
+	@include mq($until: desktop) {
+
+        display: none;
+
+    }
+
+    ul li {
+
+		display: inline;
+
+    }
+
+ }
+
+ .menu-mobile {
+
+  @include mq($from: desktop) {
+        
+       display: none;
+       
+      }
+
+}
+
+
+/* 
+########    #######    #######   ########   ########   ########   
+##         ##     ##  ##     ##     ##      ##         ##     ##  
+##         ##     ##  ##     ##     ##      ##         ##     ##  
+######     ##     ##  ##     ##     ##      ######     ########   
+##         ##     ##  ##     ##     ##      ##         ##   ##    
+##         ##     ##  ##     ##     ##      ##         ##    ##   
+##          #######    #######      ##      ########   ##     ##  
+*/
+
+.footer{
+    height: 30px;
+    width: 100%;
+    padding-top:98px;
+    background-color: #1f1f1f;
+    margin-top:73px;
+    text-align: center;
+
+    @include font-size(15);
+}
+
+.link {
+
+	color:$color-footer;
+
+}
