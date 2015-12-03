@@ -213,12 +213,12 @@ p.texte_3 {
 
 .header-content{
 	background-repeat: no-repeat;
-    background-image: url(../images/header/photo-top-chalets-savoie_v3.jpg);
+    background-image: url(../images/header.jpg);
     background-size: cover;
     width: 100%;
     padding-top: 75px;
     background-position: center center;
-
+/*
 	@media only screen and (min-width: 650px) and (max-device-width: 768px) {
 	    background-position: 0 -124px;
 	}
@@ -247,8 +247,11 @@ p.texte_3 {
          height:500px;
          padding-top: 205px;
     }
+*/
 
 }
+
+
 
 .header-title {
 	text-align: center;

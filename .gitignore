@@ -2,7 +2,6 @@
 .DS_Store
 profile
 
-
 # sass
 .sass-cache/*
 
