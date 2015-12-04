@@ -212,12 +212,13 @@ p.texte_3 {
 */
 
 .header-content{
-	background-repeat: no-repeat;
-    background-image: url(../images/header.jpg);
+	background-image: url(../images/header.jpg);
     background-size: cover;
     width: 100%;
     padding-top: 75px;
     background-position: center center;
+    height: 867px;
+    max-width: 1600px;
 /*
 	@media only screen and (min-width: 650px) and (max-device-width: 768px) {
 	    background-position: 0 -124px;
@@ -255,12 +256,15 @@ p.texte_3 {
 
 .header-title {
 	text-align: center;
-    font-family: Adobe Garamont Pro,serif;
+    font-family: Proxima Nova,serif;
     color: #fff;
+
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
 	
 	@include font-size(65);
 
-	 text-shadow: 2px 2px 2px rgba(0,0,0,.3);
+	 //text-shadow: 2px 2px 2px rgba(0,0,0,.3);
 
 	 @include mq($until: tablet) {
         @include font-size(55);
