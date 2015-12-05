@@ -39,6 +39,15 @@ body {
    ##         ##      ##          #######   
 
  */
+.texte_presentation {
+
+	color: #585858;
+	@include font-size(18);	
+    line-height: 1.4em;
+    letter-spacing: 0.11em;
+    padding-top:30px;
+
+}
 
 .editor-text {
 	color: $color-text;
@@ -152,11 +161,14 @@ p.texte_3 {
 */
 
 .title-lev1 {
-	font-family: Adobe Garamont Pro,serif;
-    color: #4f3248;
-    @include font-size(23);
-    text-align: center;
-    padding: 50px 10px 30px 0;
+	font-family: Proxima Nova,serif;
+    color: #000;
+    @include font-size(34);
+
+    text-align:center;
+    padding: 116px 0 117px 0;
+
+    text-transform:uppercase;
 }
 
 .title-lev2 {
@@ -212,43 +224,53 @@ p.texte_3 {
 */
 
 .header-content{
-	background-image: url(../images/header.jpg);
-    background-size: cover;
+	
+    // background-size: cover;
     width: 100%;
-    padding-top: 75px;
     background-position: center center;
-    height: 867px;
-    max-width: 1600px;
-/*
-	@media only screen and (min-width: 650px) and (max-device-width: 768px) {
-	    background-position: 0 -124px;
-	}
+    height: 870px;
+    background-repeat:no-repeat;
+    
 
-	@include mq($until: tablet) {
-        height:276px;
-         padding-top: 93px;
+	// @media only screen and (min-width: 650px) and (max-device-width: 768px) {
+	//     background-position: 0 -124px;
+	// }
+
+	@include mq($until: mobile) {
+         background-image: url(../images/header_320.jpg);
+         max-height:870px;
+    }
+
+	@include mq($from: mobile, $until: mobileLandscape) {
+         background-image: url(../images/header_320.jpg);
+         max-height:870px;
+    }
+
+	@include mq($from: mobileLandscape, $until: tablet) {
+         background-image: url(../images/header_480.jpg);
+         max-height:870px;
     }
 
     @include mq($from: tablet, $until: desktop) {
-         height:276px;
-         padding-top: 93px;
+         background-image: url(../images/header_768.jpg);
+         max-height:870px;
     }
 
     @include mq($from: desktop, $until: wide) {
-         height:400px;
-         padding-top: 155px
+         background-image: url(../images/header_1024.jpg);
+         max-height:870px;
     }
 
 	@include mq($from: wide, $until: xwide) {
-         height:450px;
-         padding-top: 180px
+         background-image: url(../images/header_1400.jpg);
+         max-height:870px;
     }
 
     @include mq($from: xwide) {
-         height:500px;
-         padding-top: 205px;
+         background-image: url(../images/header_1600.jpg);
+         max-height:870px;
+         max-width: 1600px;
     }
-*/
 
 }
 
@@ -307,11 +329,35 @@ p.texte_3 {
 ##     ##  ##     ##  ####  ##    ##   
 */
 
+.clear {
+
+	clear: both;
+  	height: 0; overflow: hidden; /* Précaution pour IE 7 */
+
+}
+
+
 .center-824-max {
     max-width: 824px;
     margin: 0 auto;
     padding: 0 10px;
 }
+
+.center-824-max:after {
+    clear:both;
+}
+
+
+.center-786-max {
+    max-width: 786px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+.center-786-max:after {
+    clear:both;
+}
+
 
 .center-max-phrase {
 
@@ -328,36 +374,85 @@ p.texte_3 {
 
 }
 
-.first-image {
 
-	background-repeat: no-repeat;
-    background-image: url(../images/main/first_img.jpg);
+.screen {
 
-}
-
-.second-image {
-
-	background-repeat: no-repeat;
-    background-image: url(../images/main/second_img.jpg);
+	//max-width:494px;
 
 }
 
-.third-image {
+.img-screen {
 
-	background-repeat: no-repeat;
-    background-image: url(../images/main/third_img_v2.jpg);	
+	// background-repeat: no-repeat;
+ //    background-image: url(../images/screen.png);
+
+	max-width: 464px;
+	max-height: 329px;
+
+	width:100%;
+    height:auto;
+
+}
+
+.img-tablet {
+
+	// background-repeat: no-repeat;
+ //    background-image: url(../images/tablet.png);
+
+    // width:360px;
+
+	max-width: 169px;
+	max-height: 213px;
+
+	width:100%;
+    height:auto;
+
+	@include mq($from: tablet) {
+
+		width:100%;
+
+    }
+
+    @include mq($until: tablet) {
+
+		width:50%;
+
+    }
 	
+}
+
+.img-mobile {
+
+	// background-repeat: no-repeat;
+ //    background-image: url(../images/smartphone.png);
+
+    max-width: 169px;
+	max-height: 85px;
+
+    height:auto;
+
+    @include mq($from: tablet) {
+
+		width:100%;
+
+    }
+
+    @include mq($until: tablet) {
+
+		width:50%;
+
+    }
+
 }
 
 .img {
 
+	display:block;
+
 	@include mq($from: mobileLandscape, $until: tablet) {
         background-position: center;
+        margin:auto;
     }
-
-	// width:360px;
-	width:100%;
-    height:203px;
 
 }
 
@@ -398,6 +493,14 @@ p.texte_3 {
 
 	@include mq($from: tablet) {
         margin-left:33.3%;
+    }
+
+}
+
+.center-column-2 {
+
+	@include mq($from: tablet) {
+        margin-left:25%;
     }
 
 }
