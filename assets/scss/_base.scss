@@ -160,12 +160,20 @@ p.texte_3 {
    ##      ####     ##      ########   ########    ######    
 */
 
+.title-dev {
+	@include mq($until: tablet) {
+		text-align:center;
+	}
+
+	text-decoration:underline;
+}
+
 .title-lev1 {
 	font-family: Proxima Nova,serif;
     color: #000;
     @include font-size(34);
 
-    text-align:center;
+    // text-align:center;
     padding: 116px 0 117px 0;
 
     text-transform:uppercase;
@@ -354,6 +362,12 @@ p.texte_3 {
     padding: 0 10px;
 }
 
+.padding-add {
+
+	 padding: 15px 10px;
+
+}
+
 .center-786-max:after {
     clear:both;
 }
@@ -444,6 +458,156 @@ p.texte_3 {
     }
 
 }
+
+.competences {
+
+	// height:auto;
+
+    @include mq($from: tablet) {
+
+		width:100%;
+
+    }
+
+    @include mq($until: tablet) {
+
+		width:50%;
+
+    }
+
+}
+
+.col-angular {
+
+    @include mq($from: tablet) {
+
+		height: 12%;
+    	width: 56%;
+		margin-left: 32%;
+		opacity: 0.95;
+
+	}
+
+		.angular {
+
+			@include mq($from: tablet) {
+
+				height:208px;
+				width:205px;
+
+			}
+
+			@include mq($until: tablet) {
+				
+				max-height:208px;
+				max-width:205px;
+				
+				height:auto;
+				width:100%;
+
+			}
+
+
+	}
+
+
+}
+
+.col-git {
+
+	height:10%;
+	width:10%;
+
+
+	.git {
+
+		width:198px;
+		height:196px;
+
+	}
+
+
+}
+
+.col-js {
+
+	@include mq($from: tablet) {
+
+		height:10%;
+		width:33%;
+
+	}
+
+	.js {
+
+
+		@include mq($from: tablet) {
+
+			height:369px;
+			width:369px;
+
+		}
+
+		@include mq($until: tablet) {
+			
+			max-height:369px;
+			max-width:369px;
+			
+			height:auto;
+			width:100%;
+
+		}
+
+	}
+
+}
+
+.col-css {
+
+	@include mq($from: tablet) {
+
+		height:10%;
+		width:30%;
+
+	}
+
+	.css {
+
+		position:relative;
+
+		@include mq($from: tablet) {
+
+			height:317px;
+			width:317px;
+			margin-top:190px;
+			opacity:0.95;
+
+		}
+
+		@include mq($until: tablet) {
+			
+			max-height:317px;
+			max-width:317px;
+			
+			height:auto;
+			width:100%;
+
+		}
+
+	}
+
+}
+
+.html {
+
+	height:308px;
+	width:308px;
+
+	margin-top: 110;
+    opacity: 0.95;
+
+}
+
 
 .img {
 

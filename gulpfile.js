@@ -44,7 +44,7 @@ gulp.task('browser-sync', function() {
 		 * ======================== */
 
 		proxy: "monsite.dev",
-		open: false
+		open: true
 		
 	});
 });
