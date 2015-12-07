@@ -8,3 +8,4 @@ profile
 # gulp
 node_modules/*
 assets/temp/*
+bower_components/*

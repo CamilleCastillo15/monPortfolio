@@ -1,8 +1,10 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//FR">
-<link rel="stylesheet" href="css/import.min.css">
      <html>
 		<head>
 			<title>monsite</title>
+			<link rel="stylesheet" href="css/import.min.css">
+			<script src="include/js/lib/vendor.min.js"></script>
+			<script src="include/js/lib/vendor_2.min.js"></script>
 		</head>
 		<meta charset="utf-8">
 		 <body class="noscroll-x">
@@ -145,6 +147,8 @@
 					</div>
 
 				</div>
+
+				<script src="include/js/scripts/scripts.min.js"></script>
 
 		 </body>
 
