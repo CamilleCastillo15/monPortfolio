@@ -3,46 +3,46 @@
 		<head>
 			<title>monsite</title>
 			<link rel="stylesheet" href="css/import.min.css">
-			<script src="include/js/lib/vendor.min.js"></script>
-			<script src="include/js/lib/vendor_2.min.js"></script>
+			<!--CDN link for the latest TweenMax-->
+			<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
 		</head>
 		<meta charset="utf-8">
 		 <body class="noscroll-x">
 
 		 	<div class="row">
 				<div class="header-content">
-<!-- 					<h1 class="header-title">
-					<span class="title-span">Camille</span>
-					<span class="title-span">Castillo</span>
-					</h1> -->
 				</div>
 			</div>
 
-			<div class="row">
-				<div class="center-786-max"> 
-					<div class="col-2-3">
-						<div class="title-lev1 title-dev">
-							Développeuse front - end
+			<div class="dev-front">
+
+				<div class="row">
+					<div class="center-786-max"> 
+						<div class="col-2-3">
+							<div class="title-lev1 title-dev">
+								Développeuse front - end
+							</div>
 						</div>
+						<div class="clear"></div>
 					</div>
-					<div class="clear"></div>
 				</div>
-			</div>
 
-			<div class="row pad">
+				<div class="row pad">
 
-				<div class="center-786-max"> 
+					<div class="center-786-max"> 
 
-					<div class="screen col-2-3">
-						<img src="images/screens/screen.png" alt="screen" class="img-screen img" />
-					</div>
+						<div class="screen col-2-3">
+							<img src="images/screens/screen.png" alt="screen" class="img-screen img" />
+						</div>
 
-					<div class="tablet col-1-3">
-						<img src="images/screens/tablet.png" alt="tablette" class="img-tablet img" />
-					</div>
+						<div class="tablet col-1-3">
+							<img src="images/screens/tablet.png" alt="tablette" class="img-tablet img" />
+						</div>
 
-					<div class="mobile col-1-3">
-						<img src="images/screens/smartphone.png" alt="smartphone" class="img-mobile img" />
+						<div class="mobile col-1-3">
+							<img src="images/screens/smartphone.png" alt="smartphone" class="img-mobile img" />
+						</div>
+
 					</div>
 
 				</div>

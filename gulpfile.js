@@ -35,8 +35,8 @@ var sourcemaps   = require('gulp-sourcemaps');
 var browserSync  = require('browser-sync');
 var reload       = browserSync.reload;
 var del          = require('del');
-var merge		 = require('merge-stream');
-var es 			 = require('event-stream');
+// var merge		 = require('merge-stream');
+// var es 			 = require('event-stream');
 
 gulp.task('browser-sync', function() {
 	browserSync({
@@ -70,26 +70,25 @@ gulp.task('styles', function() {
 
 gulp.task('lib', function() {
 
-	var TweenMax = gulp.src(['bower_components/**/TweenMax.js'])
+	return TweenMax = gulp.src(['bower_components/**/*.js'])
 		.pipe(sourcemaps.init())
 		.pipe(concat('vendor.js'))
 		.pipe(rename({suffix: '.min'}))
-		// .pipe(uglify().on('error', function(e) { console.log('\x07',e.message); return this.end(); }))
+		.pipe(uglify().on('error', function(e) { console.log('\x07',e.message); return this.end(); }))
 		.pipe(sourcemaps.write('.'))
 		.pipe(gulp.dest('include/js/lib'))
 		.pipe(reload({stream:true}));
 
+	// var ScrollToPlugin = gulp.src(['bower_components/**/ScrollToPlugin.js'])
+	// 	.pipe(sourcemaps.init())
+	// 	.pipe(concat('vendor_2.js'))
+	// 	.pipe(rename({suffix: '.min'}))
+	// 	// .pipe(uglify().on('error', function(e) { console.log('\x07',e.message); return this.end(); }))
+	// 	.pipe(sourcemaps.write('.'))
+	// 	.pipe(gulp.dest('include/js/lib'))
+	// 	.pipe(reload({stream:true}));
 
-	var ScrollToPlugin = gulp.src(['bower_components/**/ScrollToPlugin.js'])
-		.pipe(sourcemaps.init())
-		.pipe(concat('vendor_2.js'))
-		.pipe(rename({suffix: '.min'}))
-		// .pipe(uglify().on('error', function(e) { console.log('\x07',e.message); return this.end(); }))
-		.pipe(sourcemaps.write('.'))
-		.pipe(gulp.dest('include/js/lib'))
-		.pipe(reload({stream:true}));
-
-	return es.concat(TweenMax, ScrollToPlugin);
+	// return es.concat(TweenMax, ScrollToPlugin);
 
 });
 
@@ -103,12 +102,12 @@ gulp.task('lint', function() {
 
 gulp.task('scripts', function() {
 	return gulp.src(['assets/js/scripts/**/*.js'])
-		// .pipe(sourcemaps.init())
-		// .pipe(concat('scripts.js'))
-		// .pipe(gulp.dest('assets/temp'))
-		// .pipe(rename({suffix: '.min'}))
-		// .pipe(uglify().on('error', function(e) { console.log('\x07',e.message); return this.end(); }))
-		// .pipe(sourcemaps.write('.'))
+		.pipe(sourcemaps.init())
+		.pipe(concat('scripts.js'))
+		.pipe(gulp.dest('assets/temp'))
+		.pipe(rename({suffix: '.min'}))
+		.pipe(uglify().on('error', function(e) { console.log('\x07',e.message); return this.end(); }))
+		.pipe(sourcemaps.write('.'))
 		.pipe(gulp.dest('include/js/scripts'))
 		.pipe(reload({stream:true}));
 });
@@ -137,7 +136,7 @@ gulp.task('default', ['browser-sync'], function() {
 	gulp.watch('assets/scss/**/*.scss', ['styles']);
 
 	// Watch our own JS files and lint
-	gulp.watch('assets/js/scripts/**/*.js', ['lint']);
+	// gulp.watch('assets/js/scripts/**/*.js', ['lint']);
 	
 	// Watch .js files
 	gulp.watch(['assets/js/scripts/**/*.js'], ['scripts', 'bs-reload']);
