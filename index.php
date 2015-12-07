@@ -111,33 +111,33 @@
 						<div class="row-in">
 
 							<div class="col-1-2 col-in">
-								<div class="competences web in img"></div>
+								<div class="competences crea in img"></div>
 							</div>
 
 							<div class="col-2-2 col-ps">
-								<div class="competences web ps img"></div>
+								<div class="competences crea ps img"></div>
 							</div>
 
 						</div>
 						<div class="row-ai">
 
 							<div class="col-1-2 col-ai">
-								<div class="competences web ai img"></div>
+								<div class="competences crea ai img"></div>
 							</div>
 
 							<div class="col-2-2 col-ae">
-								<div class="competences web ae img"></div>
+								<div class="competences crea ae img"></div>
 							</div>
 
 						</div>
 						<div class="row-pe">
 
 							<div class="col-1-2 col-pe">
-								<div class="competences web pe img"></div>
+								<div class="competences crea pe img"></div>
 							</div>
 
 							<div class="col-2-2 col-au">
-								<div class="competences web au img"></div>
+								<div class="competences crea au img"></div>
 							</div>
 
 						</div>

@@ -480,7 +480,7 @@ p.texte_3 {
 			cursor:pointer;
 			 @include translate(3em, 10em);
 			 transform: scale(1.012);
-			 z-index:100
+			 z-index:1000 !important;
 
 		}
 
@@ -491,6 +491,16 @@ p.texte_3 {
 			height:100%;
 
 	    }
+
+}
+
+.competences.crea {
+
+	&:hover {
+
+			 transform: scale(1.01);
+
+		}
 
 }
 
@@ -546,26 +556,29 @@ p.texte_3 {
 
     @include mq($from: tablet) {
 
-		height: 12%;
-    	width: 43%;
-		margin-left: 32%;
-		opacity: 0.95;
+    	width: 0%;
 
 	}
 
 
 	.angular {
 
+		position:relative;
+
 		background-image: url(../images/competences/web/angular.png);
 
 		max-height:208px;
 		max-width:205px;
 
+		-webkit-animation-delay: 1s;
+	    animation-delay: 1s;
+
 		@include mq($from: tablet) {
 
 			 	height:208px;
 				width:205px;
-				margin-top: 100px;
+				margin-top: -122px;
+				margin-left: 330px;
 				opacity:0.95;
 				z-index:100;
 
@@ -588,7 +601,7 @@ p.texte_3 {
 
 	@include mq($from: tablet) {
 
-		width:10%;
+		width:0%;
 
 	}
 
@@ -596,17 +609,20 @@ p.texte_3 {
 	.git {
 
 
-	background-image: url(../images/competences/web/git.png);
+		background-image: url(../images/competences/web/git.png);
 
 		max-height:208px;
 		max-width:205px;
 
+		-webkit-animation-delay: 3.5s;
+	    animation-delay: 3.5s;
 
 		@include mq($from: tablet) {
 
 			width:198px;
 			height:196px;
-			margin-top:20px;
+			margin-top:-110px;
+			margin-left:550px;
 
 		}
 
@@ -625,7 +641,7 @@ p.texte_3 {
 
 	@include mq($from: tablet) {
 
-		width:33%;
+		width:32%;
 
 	}
 
@@ -756,9 +772,6 @@ p.texte_3 {
 
 .col-in {
 
-	position:relative;
-	z-index:1;
-
 	@include mq($from: tablet) {
 
    		width: 22%;
@@ -767,10 +780,16 @@ p.texte_3 {
 
 	.in {
 
+		position:relative;
+		z-index:1;
+
 		background-image: url(../images/competences/crea/indesign.png);
 
 		max-height:216px;
 		max-width:216px;
+
+		-webkit-animation-delay: 5s;
+	    animation-delay: 5s;
 
 		@include mq($from: tablet) {
 
@@ -791,9 +810,6 @@ p.texte_3 {
 
 .col-ps {
 
-	position:relative;
-	z-index:4;
-
 	@include mq($from: tablet) {
 
 		width:53%;
@@ -802,11 +818,16 @@ p.texte_3 {
 
 	.ps {
 
+		position:relative;
+		z-index:4;
 		
 		background-image: url(../images/competences/crea/photoshop.png);
 
 		max-height:269px;
 		max-width:269px;
+
+		-webkit-animation-delay: 6.5s;
+	    animation-delay: 6.5s;
 
 		@include mq($from: tablet) {
 
@@ -830,9 +851,6 @@ p.texte_3 {
 
 .col-ai {
 
-	position:relative;
-	z-index:5;
-
 	@include mq($from: tablet) {
 
     	width: 26%;
@@ -841,10 +859,16 @@ p.texte_3 {
 
 	.ai {
 
+		position:relative;
+		z-index:5;
+
 		background-image: url(../images/competences/crea/illustrator.png);
 
 		max-height:269px;
 		max-width:269px;
+
+		-webkit-animation-delay: 4.5s;
+	    animation-delay: 4.5s;
 
 		@include mq($from: tablet) {
 
@@ -868,9 +892,6 @@ p.texte_3 {
 
 .col-ae {
 
-	position:relative;
-	z-index:3;
-
 	@include mq($from: tablet) {
 
 		width:56%;
@@ -879,10 +900,16 @@ p.texte_3 {
 
 	.ae {
 
+		position:relative;
+		z-index:3;
+
 		background-image: url(../images/competences/crea/aftereffects.png);
 
 		max-height:243px;
 		max-width:243px;
+
+		-webkit-animation-delay: 3.5s;
+	    animation-delay: 3.5s;
 		
 
 		@include mq($from: tablet) {
@@ -891,7 +918,7 @@ p.texte_3 {
 			width:243px;
 			opacity:0.95;
 
-			margin-top:-25px;
+			margin-top:-82px;
 
 		}
 
@@ -907,9 +934,6 @@ p.texte_3 {
 
 .col-pe {
 
-	position:relative;
-	z-index:2;
-
 	@include mq($from: tablet) {
 
     	width: 21%;
@@ -918,10 +942,16 @@ p.texte_3 {
 
 	.pe {
 
+		position:relative;
+		z-index:2;
+
 		background-image: url(../images/competences/crea/premiere.png);
 
 		max-height:216px;
 		max-width:216px;
+
+		-webkit-animation-delay: 2s;
+	    animation-delay: 2s;
 
 		@include mq($from: tablet) {
 
@@ -945,9 +975,6 @@ p.texte_3 {
 
 .col-au {
 
-	position:relative;
-	z-index:1;
-
 	@include mq($from: tablet) {
 
 		width:30%;
@@ -956,12 +983,16 @@ p.texte_3 {
 
 	.au {
 
+		position:relative;
+		z-index:1;
+
 		background-image: url(../images/competences/crea/audition.png);
 
 		max-height:216px;
 		max-width:216px;
 
-
+		-webkit-animation-delay: 1.5s;
+	    animation-delay: 1.5s;
 
 		@include mq($from: tablet) {
 
