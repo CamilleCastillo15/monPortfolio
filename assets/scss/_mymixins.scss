@@ -27,3 +27,18 @@
     -webkit-appearance: none;
     -moz-appearance: none;
 }
+
+@mixin transition($duration, $type) {
+    -webkit-transition:$duration $type;
+	-moz-transition:$duration $type;
+	-o-transition:$duration $type;
+	transition:$duration $type;
+}
+
+@mixin translate($distance1, $distance2) {
+    -webkit-transform: translate($distance1, $distance2);
+    -moz-transform: translate($distance1, $distance2);
+    -o-transform: translate($distance1, $distance2);
+    -ms-transform: translate($distance1, $distance2);
+    transform: translate($distance1, $distance2);
+}

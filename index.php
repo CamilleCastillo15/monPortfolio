@@ -5,7 +5,7 @@
 			<title>monsite</title>
 		</head>
 		<meta charset="utf-8">
-		 <body>
+		 <body class="noscroll-x">
 
 		 	<div class="row">
 				<div class="header-content">
@@ -32,15 +32,15 @@
 				<div class="center-786-max"> 
 
 					<div class="screen col-2-3">
-						<img src="images/screen.png" alt="screen" class="img-screen img" />
+						<img src="images/screens/screen.png" alt="screen" class="img-screen img" />
 					</div>
 
 					<div class="tablet col-1-3">
-						<img src="images/tablet.png" alt="tablette" class="img-tablet img" />
+						<img src="images/screens/tablet.png" alt="tablette" class="img-tablet img" />
 					</div>
 
 					<div class="mobile col-1-3">
-						<img src="images/smartphone.png" alt="smartphone" class="img-mobile img" />
+						<img src="images/screens/smartphone.png" alt="smartphone" class="img-mobile img" />
 					</div>
 
 				</div>
@@ -76,58 +76,75 @@
 				</div>
 			</div>
 
-			<div class="row">
+			<div class="center-786-max padding-add"> 
 
-				<div class="center-786-max padding-add"> 
+				<div class="competences-web">
 
 					<div class="col-1-3 col-angular">
-						<img src="images/angular.png" alt="screen" class="competences web angular img" />
+						<div class="competences web angular img"></div>
 					</div>
 
 					<div class="col-1-3 col-git">
-						<img src="images/git.png" alt="screen" class="competences web git img" />
+						<div class="competences web git img"></div>
 					</div>
-					
-				</div>
-
-			</div>
-		
-			<div class="row">
-
-				<div class="center-786-max padding-add"> 
 
 					<div class="col-1-3 col-css">
-						<img src="images/css.png" alt="screen" class="competences web css img" />
+						<div class="competences web css img"></div>
 					</div>
 
+					<!-- <div class="col-1-3 col-js">
+						<img src="images/competences/web/js.png" alt="screen" class="competences web js img" />
+					</div> -->
+
 					<div class="col-1-3 col-js">
-						<img src="images/js.png" alt="screen" class="competences web js img" />
+						<div class="competences web js img"></div>
 					</div>
 
 					<div class="col-1-3 col-html">
-						<img src="images/html_v3.png" alt="screen" class="competences web html img" />
+						<div class="competences web html img"></div>
 					</div>
 
 				</div>
 
-			</div>
+				<div class="competences-crea">
 
-			<div class="row">
+						<div class="row-in">
 
-				<div class="center-786-max padding-add"> 
+							<div class="col-1-2 col-in">
+								<div class="competences web in img"></div>
+							</div>
 
-					<div class="col-1-3 col-css">
-						<img src="images/css.png" alt="screen" class="competences web css img" />
-					</div>
+							<div class="col-2-2 col-ps">
+								<div class="competences web ps img"></div>
+							</div>
 
-					<div class="col-1-3 col-js">
-						<img src="images/js.png" alt="screen" class="competences web js img" />
+						</div>
+						<div class="row-ai">
+
+							<div class="col-1-2 col-ai">
+								<div class="competences web ai img"></div>
+							</div>
+
+							<div class="col-2-2 col-ae">
+								<div class="competences web ae img"></div>
+							</div>
+
+						</div>
+						<div class="row-pe">
+
+							<div class="col-1-2 col-pe">
+								<div class="competences web pe img"></div>
+							</div>
+
+							<div class="col-2-2 col-au">
+								<div class="competences web au img"></div>
+							</div>
+
+						</div>
+
 					</div>
 
 				</div>
-
-			</div>
-			
 
 		 </body>
 

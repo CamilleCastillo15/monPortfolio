@@ -26,6 +26,10 @@ body {
 	&.noscroll {
 		overflow: hidden;
 	}
+
+	&.noscroll-x {
+		overflow-x: hidden;
+	}
 }
 
 /* 
@@ -245,37 +249,37 @@ p.texte_3 {
 	// }
 
 	@include mq($until: mobile) {
-         background-image: url(../images/header_320.jpg);
+         background-image: url(../images/header/header_320.jpg);
          max-height:870px;
     }
 
 	@include mq($from: mobile, $until: mobileLandscape) {
-         background-image: url(../images/header_320.jpg);
+         background-image: url(../images/header/header_320.jpg);
          max-height:870px;
     }
 
 	@include mq($from: mobileLandscape, $until: tablet) {
-         background-image: url(../images/header_480.jpg);
+         background-image: url(../images/header/header_480.jpg);
          max-height:870px;
     }
 
     @include mq($from: tablet, $until: desktop) {
-         background-image: url(../images/header_768.jpg);
+         background-image: url(../images/header/header_768.jpg);
          max-height:870px;
     }
 
     @include mq($from: desktop, $until: wide) {
-         background-image: url(../images/header_1024.jpg);
+         background-image: url(../images/header/header_1024.jpg);
          max-height:870px;
     }
 
 	@include mq($from: wide, $until: xwide) {
-         background-image: url(../images/header_1400.jpg);
+         background-image: url(../images/header/header_1400.jpg);
          max-height:870px;
     }
 
     @include mq($from: xwide) {
-         background-image: url(../images/header_1600.jpg);
+         background-image: url(../images/header/header_1600.jpg);
          max-height:870px;
          max-width: 1600px;
     }
@@ -461,19 +465,81 @@ p.texte_3 {
 
 .competences {
 
-	// height:auto;
+		background-repeat:no-repeat;
+		background-position: center top;
+		background-size: 100% auto;
 
-    @include mq($from: tablet) {
+		// -webkit-animation: moveclouds 15s linear infinite, sideWays 4s ease-in-out infinite alternate; /* Chrome, Safari, Opera */
+	    -webkit-animation: bubble 2s linear infinite, sideWays 4s ease-in-out infinite alternate;  
+	    // -webkit-animation-iteration-count: infinite; 
+	    // animation-name: bubble;
+	    // animation-timing-function: ease-in-out;
+	    // animation-fill-mode: forwards;
+	    // animation-delay: 2s;
 
-		width:100%;
+		@include mq($from: tablet) {
 
+		    @include transition(1s, ease-in-out);
+
+		}
+
+		&:hover {
+
+			cursor:pointer;
+			 @include translate(3em, 10em);
+			 transform: scale(1.019);
+
+		}
+
+
+	    @include mq($until: tablet) {
+
+			width:100%;
+			height:100%;
+
+	    }
+
+}
+
+@-webkit-keyframes moveclouds {
+    0% {
+        top: 500px;
     }
-
-    @include mq($until: tablet) {
-
-		width:50%;
-
+    100% {
+        top: -500px;
     }
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes bubble {
+    0%   {top:0px;}
+    50%  {top:70px;}
+    100% {top:0px;}
+}
+
+/* Standard syntax */
+@keyframes bubble {
+    0%   {top:0px;}
+    55%  {top:5px;}
+    100% {top:0px;}
+}
+
+@include mq($from: tablet) {
+
+	.competences-web {
+
+		position:relative;
+		height:708px;
+
+	}
+
+	.competences-crea {
+		
+		position:relative;
+		margin-top:300px;
+		height:595px;
+
+	}
 
 }
 
@@ -482,31 +548,34 @@ p.texte_3 {
     @include mq($from: tablet) {
 
 		height: 12%;
-    	width: 56%;
+    	width: 43%;
 		margin-left: 32%;
 		opacity: 0.95;
 
 	}
 
-		.angular {
 
-			@include mq($from: tablet) {
+	.angular {
 
-				height:208px;
+		background-image: url(../images/competences/web/angular.png);
+
+		max-height:208px;
+		max-width:205px;
+
+
+		@include mq($from: tablet) {
+
+			 	height:208px;
 				width:205px;
 
-			}
+		}
 
-			@include mq($until: tablet) {
-				
-				max-height:208px;
-				max-width:205px;
-				
-				height:auto;
-				width:100%;
 
-			}
+		&:hover {
 
+			background-image: url(../images/competences/web/hover/angular_hover.png);
+			
+		}
 
 	}
 
@@ -515,17 +584,37 @@ p.texte_3 {
 
 .col-git {
 
-	height:10%;
-	width:10%;
+	@include mq($from: tablet) {
+
+		width:10%;
+
+	}
 
 
 	.git {
 
-		width:198px;
-		height:196px;
+
+	background-image: url(../images/competences/web/git.png);
+
+		max-height:208px;
+		max-width:205px;
+
+
+		@include mq($from: tablet) {
+
+			width:198px;
+			height:196px;
+
+		}
+
+
+		&:hover {
+
+			background-image: url(../images/competences/web/hover/git_hover.png);
+			
+		}
 
 	}
-
 
 }
 
@@ -533,29 +622,30 @@ p.texte_3 {
 
 	@include mq($from: tablet) {
 
-		height:10%;
 		width:33%;
 
 	}
 
 	.js {
 
+		background-image: url(../images/competences/web/js.png);
+
+		max-height:369px;
+		max-width:369px;
+
 
 		@include mq($from: tablet) {
 
-			height:369px;
-			width:369px;
+			 	height:369px;
+				width:369px;
 
 		}
 
-		@include mq($until: tablet) {
-			
-			max-height:369px;
-			max-width:369px;
-			
-			height:auto;
-			width:100%;
 
+		&:hover {
+
+			background-image: url(../images/competences/web/hover/js_hover.png);
+			
 		}
 
 	}
@@ -566,14 +656,18 @@ p.texte_3 {
 
 	@include mq($from: tablet) {
 
-		height:10%;
-		width:30%;
+		width:26%;
 
 	}
 
 	.css {
 
 		position:relative;
+
+		background-image: url(../images/competences/web/css.png);
+
+		max-height:317px;
+		max-width:317px;
 
 		@include mq($from: tablet) {
 
@@ -584,36 +678,303 @@ p.texte_3 {
 
 		}
 
-		@include mq($until: tablet) {
-			
-			max-height:317px;
-			max-width:317px;
-			
-			height:auto;
-			width:100%;
+		&:hover {
 
+			background-image: url(../images/competences/web/hover/css_hover.png);
+			
 		}
 
 	}
 
 }
 
-.html {
+.col-html {
 
-	height:308px;
-	width:308px;
+	.html {
 
-	margin-top: 110;
-    opacity: 0.95;
+		background-image: url(../images/competences/web/html_v3.png);
+
+		max-height:308px;
+		max-width:308px;
+
+	    @include mq($from: tablet) {
+
+			height:308px;
+			width:308px;
+			margin-top:110px;
+			opacity:0.95;
+
+		}
+
+		&:hover {
+
+			background-image: url(../images/competences/web/hover/html_hover.png);
+			
+		}
+
+	}
 
 }
 
+@include mq($from: tablet) {
+
+	.row-in {
+
+		// margin-top:75px;
+		margin-left:30px;
+
+	}
+
+
+	.row-ai {
+
+		margin-top:85px;
+
+	}
+
+	.row-pe {
+
+		// margin-top:45px;
+		margin-left:90px;
+
+	}
+
+}
+
+.col-in {
+
+	position:relative;
+	z-index:1;
+
+	@include mq($from: tablet) {
+
+   		width: 22%;
+
+	}
+
+	.in {
+
+		background-image: url(../images/competences/crea/indesign.png);
+
+		max-height:216px;
+		max-width:216px;
+
+		@include mq($from: tablet) {
+
+			height:216px;
+			width:216px;
+			opacity:0.95;
+
+		}
+
+		&:hover {
+
+			background-image: url(../images/competences/crea/hover/indesign_hover.png);
+			
+		}
+	}
+
+}
+
+.col-ps {
+
+	position:relative;
+	z-index:4;
+
+	@include mq($from: tablet) {
+
+		width:53%;
+
+	}
+
+	.ps {
+
+		
+		background-image: url(../images/competences/crea/photoshop.png);
+
+		max-height:269px;
+		max-width:269px;
+
+		@include mq($from: tablet) {
+
+			margin-top:30px;
+
+			height:269px;
+			width:269px;
+			opacity:0.95;
+
+		}
+
+		&:hover {
+
+			background-image: url(../images/competences/crea/hover/photoshop_hover.png);
+			
+		}
+
+	}
+
+}
+
+.col-ai {
+
+	position:relative;
+	z-index:5;
+
+	@include mq($from: tablet) {
+
+    	width: 26%;
+
+	}
+
+	.ai {
+
+		background-image: url(../images/competences/crea/illustrator.png);
+
+		max-height:269px;
+		max-width:269px;
+
+		@include mq($from: tablet) {
+
+			height:269px;
+			width:269px;
+			opacity:0.95;
+
+			margin-top:-185px;
+
+		}
+
+		&:hover {
+
+			background-image: url(../images/competences/crea/hover/illustrator_hover.png);
+			
+		}
+
+	}
+
+}
+
+.col-ae {
+
+	position:relative;
+	z-index:3;
+
+	@include mq($from: tablet) {
+
+		width:56%;
+
+	}
+
+	.ae {
+
+		background-image: url(../images/competences/crea/aftereffects.png);
+
+		max-height:243px;
+		max-width:243px;
+		
+
+		@include mq($from: tablet) {
+
+			height:243px;
+			width:243px;
+			opacity:0.95;
+
+			margin-top:-25px;
+
+		}
+
+		&:hover {
+
+			background-image: url(../images/competences/crea/hover/aftereffects_hover.png);
+			
+		}
+
+	}
+
+}
+
+.col-pe {
+
+	position:relative;
+	z-index:2;
+
+	@include mq($from: tablet) {
+
+    	width: 21%;
+
+	}
+
+	.pe {
+
+		background-image: url(../images/competences/crea/premiere.png);
+
+		max-height:216px;
+		max-width:216px;
+
+		@include mq($from: tablet) {
+
+			height:216px;
+			width:216px;
+			opacity:0.95;
+
+			margin-top:-150px;
+
+		}
+
+		&:hover {
+
+			background-image: url(../images/competences/crea/hover/premiere_hover.png);
+			
+		}
+
+	}
+
+}
+
+.col-au {
+
+	position:relative;
+	z-index:1;
+
+	@include mq($from: tablet) {
+
+		width:30%;
+
+	}
+
+	.au {
+
+		background-image: url(../images/competences/crea/audition.png);
+
+		max-height:216px;
+		max-width:216px;
+
+
+
+		@include mq($from: tablet) {
+
+			height:216px;
+			width:216px;
+			opacity:0.95;
+
+			margin-top:-110px;
+
+		}
+
+		&:hover {
+
+			background-image: url(../images/competences/crea/hover/audition_hover.png);
+			
+		}
+
+	}
+
+}
 
 .img {
 
 	display:block;
 
-	@include mq($from: mobileLandscape, $until: tablet) {
+	@include mq($until: tablet) {
         background-position: center;
         margin:auto;
     }
