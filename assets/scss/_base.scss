@@ -32,6 +32,7 @@ body {
 	}
 }
 
+
 /* 
 
 ########   ##    ##   ########    #######   
@@ -46,7 +47,7 @@ body {
 .texte_presentation {
 
 	color: #585858;
-	@include font-size(18);	
+	@include font-size(16);	
     line-height: 1.4em;
     letter-spacing: 0.11em;
     padding-top:30px;
@@ -164,32 +165,72 @@ p.texte_3 {
    ##      ####     ##      ########   ########    ######    
 */
 
-.title-dev {
+.title-monsite {
+
 	@include mq($until: tablet) {
 		text-align:center;
 	}
 
-	text-decoration:underline;
+	padding: 116px 0 0;
+
 }
 
+// .title-dev {
+
+// 	visibility:hidden;
+
+// }
+
+.title-filet {
+    width: 150px;
+    height: 2px;
+    background-color: black;
+    margin: 5px 10px 0px 0px;
+}
+
+// .title-parcours-diplomes {
+
+// 	text-align:center;
+
+// }
+
+// .title-parcours-diplomes-nom {
+
+// 	text-align:center;
+
+// }
+
 .title-lev1 {
+	text-transform: uppercase;
 	font-family: Proxima Nova,serif;
-    color: #000;
-    @include font-size(34);
+	color: #000;
+    @include font-size(28);
 
-    // text-align:center;
-    padding: 116px 0 117px 0;
+	@include mq($from: mobileLandscape, $until: tablet) {
+        text-align: center;
+    }
 
-    text-transform:uppercase;
 }
 
 .title-lev2 {
 	text-transform: uppercase;
 	font-family: Proxima Nova,serif;
-	color: $color-default;
-	padding:38px 0px 16px;
-	@include font-size(19);
-	line-height:1.3;
+	color: #000;
+
+	@include font-size(20);
+	line-height:2;
+
+	&:first-line {
+
+		line-height:1;
+
+	}
+
+	font-weight:300;
+
+	@include mq($from: tablet) {
+        display:inline-block;
+    }
 
 	@include mq($from: mobileLandscape, $until: tablet) {
         text-align: center;
@@ -198,12 +239,11 @@ p.texte_3 {
 }
 
 .title-lev3 {
-	text-transform: uppercase;
-	font-family: Proxima Nova,serif;
-	color: $color-default;
-	padding:38px 0px 0px;
-	@include font-size(15);
-	line-height:1;
+	font-family: Adobe Garamond Pro,serif;
+	color: #000;
+
+	@include font-size(16);
+	line-height:1.5;
 
 	@include mq($from: mobileLandscape, $until: tablet) {
         text-align: center;
@@ -239,10 +279,11 @@ p.texte_3 {
 	
     // background-size: cover;
     width: 100%;
-    background-position: center center;
-    height: 870px;
+    height:100%;
+    background-position: top center;
+    // height: 870px;
     background-repeat:no-repeat;
-    
+    background-size: 100% auto;
 
 	// @media only screen and (min-width: 650px) and (max-device-width: 768px) {
 	//     background-position: 0 -124px;
@@ -306,9 +347,6 @@ p.texte_3 {
 
 }
 
-.row {
-	// background-color: red;
-}
 
 [class^="col"] {
 	// background-color: yellow;
@@ -341,7 +379,19 @@ p.texte_3 {
 ##     ##  ##     ##  ####  ##    ##   
 */
 
+.hidden {
+
+	visibility:hidden;
+
+}
+
 .dev-front {
+
+	visibility:hidden;
+
+}
+
+.interets{
 
 	visibility:hidden;
 
@@ -372,6 +422,12 @@ p.texte_3 {
     padding: 0 10px;
 }
 
+.center-800-max {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
 .padding-add {
 
 	 padding: 15px 10px;
@@ -382,6 +438,9 @@ p.texte_3 {
     clear:both;
 }
 
+.center-800-max:after {
+    clear:both;
+}
 
 .center-max-phrase {
 
@@ -398,42 +457,80 @@ p.texte_3 {
 
 }
 
+.responsive {
 
-.screen {
+	position:relative;
 
-	//max-width:494px;
+	background-repeat:no-repeat;
+	background-position: center top;
+	background-size: 100% auto;
+	width:100%;
+
+	@include mq($from: mobileLandscape, $until: tablet) {
+
+		height:50%;
+
+    }
+
+    @include mq($from: mobile, $until: mobileLandscape) {
+
+		height:40%;
+
+    }
+
+    @include mq($until: mobile) {
+
+		height:20%;
+
+    }
+
+    @include transition(1s, ease-in-out);
+
+		&:hover {
+
+			 @include translate(3em, 10em);
+			 transform: scale(1.012);
+			cursor:pointer;
+
+		}
 
 }
 
 .img-screen {
 
-	// background-repeat: no-repeat;
- //    background-image: url(../images/screen.png);
-
 	max-width: 464px;
 	max-height: 329px;
 
-	width:100%;
-    height:auto;
+	background-image: url(../images/screens/screen.png);
+
+	@include mq($from: tablet) {
+
+		width: 464px;
+		height: 329px;
+
+    }
+
+    &:hover {
+
+		background-image: url(../images/screens/hover/screen_hover.png);
+
+
+	}
+
 
 }
 
 .img-tablet {
 
-	// background-repeat: no-repeat;
- //    background-image: url(../images/tablet.png);
-
-    // width:360px;
-
 	max-width: 169px;
 	max-height: 213px;
 
-	width:100%;
-    height:auto;
+	background-image: url(../images/screens/tablet.png);
 
-	@include mq($from: tablet) {
+   @include mq($from: tablet) {
 
-		width:100%;
+		width: 169px;
+		height: 213px;
 
     }
 
@@ -442,22 +539,28 @@ p.texte_3 {
 		width:50%;
 
     }
+
+     &:hover {
+
+		background-image: url(../images/screens/hover/tablet_hover.png);
+
+
+	}
 	
 }
 
 .img-mobile {
 
-	// background-repeat: no-repeat;
- //    background-image: url(../images/smartphone.png);
 
     max-width: 169px;
 	max-height: 85px;
 
-    height:auto;
+	background-image: url(../images/screens/smartphone.png);
 
-    @include mq($from: tablet) {
+	@include mq($from: tablet) {
 
-		width:100%;
+		width: 169px;
+		height: 85px;
 
     }
 
@@ -467,9 +570,199 @@ p.texte_3 {
 
     }
 
+     &:hover {
+
+		background-image: url(../images/screens/hover/smartphone_hover.png);
+
+
+	}
+
+}
+
+.parcours {
+
+	visibility:hidden;
+
+}
+
+.row-parcours {
+
+		display: block;
+		@include clearfix;
+		margin: 10px;
+
+		@include mq($from: tablet) {
+			margin: 10px;
+		}
+
+		@include mq($from: desktop) {
+			margin: 20px;
+		}
+
+		@include mq($from: wide) {
+			margin: 20px;
+		}
+
+		&.add-vertical-padding {
+			@include mq($until: tablet) {
+				padding-top: 10px;
+				padding-bottom: 10px;
+			}
+		}
+	}
+
+.col-parcours-filet {
+
+	position:absolute;
+	left:50%;
+	
+	.parcours-filet {
+
+
+		@include mq($from:tablet) {
+
+		width: 1.5px;
+	    height: 720px;
+	    background-color: black;
+	    margin:5px 5px 5px 5px;
+
+	    position:relative;
+	    left:-50%;
+
+		}
+
+	}
+
+}
+
+
+
+.row-stage {
+
+		display: block;
+		@include clearfix;
+		margin: 10px;
+
+		@include mq($from: tablet) {
+			margin: 10px;
+		}
+
+		@include mq($from: desktop) {
+			margin: 10px;
+		}
+
+		@include mq($from: wide) {
+			margin: 10px;
+		}
+
+		&.add-vertical-padding {
+			@include mq($until: tablet) {
+				padding-top: 10px;
+				padding-bottom: 10px;
+			}
+		}
+	}
+
+.img-parcours {
+
+	position:relative;
+
+	background-repeat:no-repeat;
+	background-position: center top;
+	background-size: 100% auto;
+	
+	width:100%;
+	height:100%;
+
+	@include mq($from: mobileLandscape, $until: tablet) {
+
+		height:50%;
+
+    }
+
+    @include mq($from: mobile, $until: mobileLandscape) {
+
+		height:40%;
+
+    }
+
+    @include mq($until: mobile) {
+
+		height:20%;
+
+    }
+
+}
+
+
+.mmi{
+
+	color:#1f8638;
+
+}
+
+.erasmus {
+
+	color:#835422;
+
+}
+
+.ducci {
+
+	color:#769142;
+
+}
+
+.cim {
+
+	color:#96bfd1;
+
+}
+
+.stage{
+
+	display:inline;
+
+}
+
+.img-dut {
+
+	max-width: 110px;
+	max-height: 87px;
+
+	background-image: url(../images/parcours/dut_v2.png);
+}
+
+.img-erasmus {
+
+	max-width: 112px;
+	max-height: 83px;
+
+	background-image: url(../images/parcours/erasmus.png);
+
+}
+
+.img-ducci {
+
+	max-width: 89px;
+	max-height: 86px;
+
+	background-image: url(../images/parcours/ducci.png);
+
+}
+
+.img-cim {
+
+	max-width: 89px;
+	max-height: 84px;
+
+	background-image: url(../images/parcours/cim.png);
+
 }
 
 .competences {
+
+		// visibility:hidden;
 
 		position:relative;
 
