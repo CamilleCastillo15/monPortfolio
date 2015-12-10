@@ -172,7 +172,7 @@ p.texte_3 {
 		text-align:center;
 	}
 
-	padding: 116px 0 0;
+	padding: 50px 0 0;
 
 }
 
@@ -189,17 +189,21 @@ p.texte_3 {
     margin: 5px 10px 0px 0px;
 }
 
-// .title-parcours-diplomes {
+.title-parcours-diplomes {
 
-// 	text-align:center;
+	@include mq($until: tablet) {
+		text-align:center;
+	}
 
-// }
+}
 
-// .title-parcours-diplomes-nom {
+.title-parcours-diplomes-nom {
 
-// 	text-align:center;
+	@include mq($until: tablet) {
+		text-align:center;
+	}
 
-// }
+}
 
 .title-lev1 {
 	text-transform: uppercase;
@@ -282,47 +286,44 @@ p.texte_3 {
     width: 100%;
     height:100%;
     background-position: top center;
-    // height: 870px;
     background-repeat:no-repeat;
-    background-size: 100% auto;
-
-	// @media only screen and (min-width: 650px) and (max-device-width: 768px) {
-	//     background-position: 0 -124px;
-	// }
 
 	@include mq($until: mobile) {
          background-image: url(../images/header/header_320.jpg);
-         max-height:870px;
+         height:870px;
     }
 
 	@include mq($from: mobile, $until: mobileLandscape) {
          background-image: url(../images/header/header_320.jpg);
-         max-height:870px;
+         height:870px;
     }
 
 	@include mq($from: mobileLandscape, $until: tablet) {
          background-image: url(../images/header/header_480.jpg);
-         max-height:870px;
+         height:870px;
     }
 
     @include mq($from: tablet, $until: desktop) {
          background-image: url(../images/header/header_768.jpg);
-         max-height:870px;
+         height:870px;
     }
 
     @include mq($from: desktop, $until: wide) {
          background-image: url(../images/header/header_1024.jpg);
-         max-height:870px;
+         background-size: 100% auto;
+         height:870px;
     }
 
 	@include mq($from: wide, $until: xwide) {
          background-image: url(../images/header/header_1400.jpg);
-         max-height:870px;
+         background-size: 100% auto;
+         max-height:670px;
     }
 
     @include mq($from: xwide) {
          background-image: url(../images/header/header_1600.jpg);
-         max-height:870px;
+         background-size: 100% auto;
+         max-height:670px;
          max-width: 1600px;
     }
 
@@ -643,16 +644,24 @@ p.texte_3 {
 	
 	.parcours-filet {
 
-
-		@include mq($from:tablet) {
-
 		width: 1.5px;
-	    height: 720px;
-	    background-color: black;
+		background-color: black;
 	    margin:5px 5px 5px 5px;
 
 	    position:relative;
 	    left:-50%;
+
+		@include mq($from:desktop) {
+
+		
+	    	height: 620px;
+	    
+
+		}
+
+		@include mq($from:tablet, $until:desktop) {
+
+			height:500px;
 
 		}
 
@@ -855,6 +864,7 @@ p.texte_3 {
 	.competences-web {
 
 		height:708px;
+		margin-top:200px;
 
 	}
 
@@ -1557,16 +1567,64 @@ ul.ul-menu-desktop {
 */
 
 .footer{
-    height: 30px;
+    height: 200px;
     width: 100%;
-    padding-top:98px;
+    padding-top:15px;
     background-color: #1f1f1f;
     margin-top:73px;
     text-align: center;
     position:relative;
 
     @include font-size(15);
+
+    .col-1-3 {
+		
+		@include mq($until: tablet) {
+				
+				width:33.3%
+				
+
+		}
+
+
+    }
+
+    .linkedin {
+
+		background-image: url(../images/footer/linkedin_v2.png);
+		background-repeat:no-repeat;
+		background-size: 20% auto;
+		background-position:center center;
+		width:100%;
+		height:100%;
+
+    }
+
+	.github {
+
+		background-image: url(../images/footer/github_v2.png);
+		background-repeat:no-repeat;
+		background-size: 20% auto;
+		background-position:center center;
+		width:100%;
+		height:100%;
+
+    }
+
+    .behance {
+
+		background-image: url(../images/footer/behance_v2.png);
+		background-repeat:no-repeat;
+		background-size: 20% auto;
+		background-position:center center;
+		width:100%;
+		height:100%
+
+    }
+
 }
+
+
 
 .link {
 

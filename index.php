@@ -356,14 +356,35 @@
 
 			<div class="center-800-max padding-add"> 
 
-				<div class="footer">
+				<footer class="footer">
+						
+					<a class="a-linkedin" href="http://www.w3schools.com">
+						<div class="col-1-3">
+							<div class="linkedin">
+							</div>
+						</div>
+					</a>
+						
+					<a class="a-github" href="http://www.w3schools.com">
+						<div class="col-1-3">
+							<div class="github">
+							</div>
+						</div>
+					</a>
 
-				</div>
+					<a class="a-behance" href="http://www.w3schools.com">	
+						<div class="col-1-3">
+							<div class="behance">
+							</div>
+						</div>
+					</a>
+
+				</footer>
 
 			</div>
 
-				<script src="include/js/scripts/animations.js"></script>
-				<!-- <script src="include/js/scripts/scripts.min.js"></script> -->
+				<!-- <script src="include/js/scripts/animations.js"></script> -->
+				<script src="include/js/scripts/scripts.min.js"></script>
 
 		 </body>
 
