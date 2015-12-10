@@ -2,9 +2,41 @@ var flag1 = true;
 var flag2 = true;
 var flag3 = true;
 
+$(window).on('scroll', function() {
+
+    var y_scroll_pos = window.pageYOffset;
+    console.log(y_scroll_pos);
+
+    var scroll_pos_ShowDev = 200;  
+    var scroll_pos_ShowParcours = 800;   
+    var scroll_pos_ShowInterests = 1500;             
+
+    if(y_scroll_pos > scroll_pos_ShowDev && flag1 == true) {
+        
+        ShowDev();
+        flag1 = false;
+
+    }
+
+    if(y_scroll_pos > scroll_pos_ShowParcours && flag2 == true) {
+        
+        ShowParcours();
+        flag2 = false;
+
+    }
+
+    if(y_scroll_pos > scroll_pos_ShowInterests && flag3 == true) {
+        
+        ShowInterests();
+        flag3 = false;
+
+    }
+
+});
+
 function ShowDev()	{
 
-	tl = new TimelineLite({delay:0.4});
+	tl = new TimelineLite({delay:0.2});
 
 	TweenLite.set(".dev-front", {visibility:"visible"})
 
@@ -13,7 +45,6 @@ function ShowDev()	{
 	  .from(".img-tablet", 0.6, {x:+30, opacity:0})
 	  .from(".img-mobile", 0.6, {y:30, opacity:0})
 	  .from(".texte_presentation", 0.6, {y:+30, opacity:0})
-	  
 
 }
 
@@ -45,36 +76,3 @@ function ShowInterests()	{
 	tl.from(".interets", 0.6, {y:30, opacity:0.5}, "-=0.3")
 
 }
-
-  $(window).on('scroll', function() {
-
-	    var y_scroll_pos = window.pageYOffset;
-	    console.log(y_scroll_pos);
-
-	    var scroll_pos_ShowDev = 700;  
-	    var scroll_pos_ShowParcours = 1400;   
-	    var scroll_pos_ShowInterests = 1900;             
-
-	    if(y_scroll_pos > scroll_pos_ShowDev && flag1 == true) {
-	        
-	        ShowDev()
-	        flag1 = false;
-
-	    }
-
-	    if(y_scroll_pos > scroll_pos_ShowParcours && flag2 == true) {
-	        
-	        ShowParcours()
-	        flag2 = false;
-
-	    }
-
-	    if(y_scroll_pos > scroll_pos_ShowInterests && flag3 == true) {
-	        
-	        ShowInterests()
-	        flag3 = false;
-
-	    }
-
-
-});

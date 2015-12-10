@@ -510,10 +510,10 @@ p.texte_3 {
 
     }
 
-    @include transition(1s, ease-in-out);
-
 		&:hover {
 
+			
+    		 @include transition(1s, ease-in-out);
 			 @include translate(3em, 10em);
 			 transform: scale(1.012);
 			cursor:pointer;

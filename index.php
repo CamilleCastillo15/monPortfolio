@@ -1,10 +1,10 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//FR">
      <html>
 		<head>
-			<title>monsite</title>
+			<title>Portfolio-CC</title>
 			<link rel="stylesheet" href="css/import.min.css">
-			<!--CDN link for the latest TweenMax-->
 			<script src="include/js/lib/vendor.min.js"></script>
+			<!--CDN link for the latest TweenMax-->
 			<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
 		</head>
 		<meta charset="utf-8">
@@ -358,21 +358,21 @@
 
 				<footer class="footer">
 						
-					<a class="a-linkedin" href="http://www.w3schools.com">
+					<a class="a-linkedin" href="https://www.linkedin.com/?trk=hb-0-h-logo" target="_blank">
 						<div class="col-1-3">
 							<div class="linkedin">
 							</div>
 						</div>
 					</a>
 						
-					<a class="a-github" href="http://www.w3schools.com">
+					<a class="a-github" href="https://github.com/CamilleCastillo15/" target="_blank">
 						<div class="col-1-3">
 							<div class="github">
 							</div>
 						</div>
 					</a>
 
-					<a class="a-behance" href="http://www.w3schools.com">	
+					<a class="a-behance" href="https://www.behance.net/camomille069" target="_blank">	
 						<div class="col-1-3">
 							<div class="behance">
 							</div>
