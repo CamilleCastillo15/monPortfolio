@@ -1,0 +1,123 @@
+.dev-front {
+
+	visibility:hidden;
+
+}
+
+.responsive {
+
+	position:relative;
+
+	background-repeat:no-repeat;
+	background-position: center top;
+	background-size: 100% auto;
+	width:100%;
+
+	@include mq($from: mobileLandscape, $until: tablet) {
+
+		height:50%;
+
+    }
+
+    @include mq($from: mobile, $until: mobileLandscape) {
+
+		height:40%;
+
+    }
+
+    @include mq($until: mobile) {
+
+		height:20%;
+
+    }
+
+		&:hover {
+			
+    		 @include transition(1s, ease-in-out);
+			 @include translate(3em, 10em);
+			 transform: scale(1.012);
+			 cursor:pointer;
+
+		}
+
+}
+
+.img-screen {
+
+	max-width: 464px;
+	max-height: 329px;
+
+	background-image: url(../images/screens/screen.png);
+
+	@include mq($from: tablet) {
+
+		width: 464px;
+		height: 329px;
+
+    }
+
+    &:hover {
+
+		background-image: url(../images/screens/hover/screen_hover.png);
+
+	}
+
+
+}
+
+.img-tablet {
+
+	max-width: 169px;
+	max-height: 213px;
+
+	background-image: url(../images/screens/tablet.png);
+
+   @include mq($from: tablet) {
+
+		width: 169px;
+		height: 213px;
+
+    }
+
+    @include mq($until: tablet) {
+
+		width:50%;
+
+    }
+
+     &:hover {
+
+		background-image: url(../images/screens/hover/tablet_hover.png);
+
+	}
+	
+}
+
+.img-mobile {
+
+
+    max-width: 169px;
+	max-height: 85px;
+
+	background-image: url(../images/screens/smartphone.png);
+
+	@include mq($from: tablet) {
+
+		width: 169px;
+		height: 85px;
+
+    }
+
+    @include mq($until: tablet) {
+
+		width:50%;
+
+    }
+
+     &:hover {
+
+		background-image: url(../images/screens/hover/smartphone_hover.png);
+
+	}
+
+}

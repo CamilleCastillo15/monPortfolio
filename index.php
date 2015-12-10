@@ -26,7 +26,7 @@
 								Développeuse front - end
 							</div>
 							<div class="title-filet">
-						</div>
+							</div>
 						</div>
 						<div class="clear"></div>
 					</div>
@@ -75,17 +75,17 @@
 			<div class="parcours">
 
 				<div class="row">
-				<div class="center-800-max"> 
-					<div class="col-2-3">
-						<div class="title-lev1 title-monsite title-parcours">
-							Parcours
+					<div class="center-800-max"> 
+						<div class="col-2-3">
+							<div class="title-lev1 title-monsite title-parcours">
+								Parcours
+							</div>
+							<div class="title-filet">
+							</div>
 						</div>
-						<div class="title-filet">
-						</div>
+						<div class="clear"></div>
 					</div>
-					<div class="clear"></div>
 				</div>
-			</div>
 
 
 				<div class="center-800-max"> 
@@ -93,7 +93,6 @@
 					<div class="col-1-2">
 
 						<div class="row row-parcours row-dut">
-
 							<div class="col-1-3">
 								<div class="img-dut img-parcours img"></div>
 							</div>
@@ -109,11 +108,9 @@
 									Métiers du Multimédia et de l’Internet
 								</div>
 							</div>
-
 						</div>
 
 						<div class="row row-parcours row-erasmus">
-
 							<div class="col-1-3">
 								<div class="img-erasmus img-parcours img"></div>
 							</div>
@@ -129,11 +126,9 @@
 									Spécialité Technologies Web
 								</div>
 							</div>
-
 						</div>
 
 						<div class="row row-parcours row-ducci">
-
 							<div class="col-1-3">
 								<div class="img-ducci img-parcours img"></div>
 							</div>
@@ -149,11 +144,9 @@
 									Diplômes Universitaires de Communication et Conceptions Infographiques
 								</div>
 							</div>
-
 						</div>
 
 						<div class="row row-parcours row-cim">
-
 							<div class="col-1-3">
 								<div class="img-cim img-parcours img"></div>
 							</div>
@@ -169,8 +162,8 @@
 									Master 2 Conception et Intégration Multimédia
 								</div>
 							</div>
-
 						</div>
+
 					</div>
 					
 					<div class="col-1-2">
@@ -184,7 +177,6 @@
 					<div class="col-1-2">
 
 						<div class="row row-stage stage1">
-
 							<div class="col-3-3">
 								<div class="title-lev3 title-parcours-diplomes-nom">
 									<div class="mmi stage">Stage :</div> Agence Interactive (Lyon)
@@ -192,12 +184,10 @@
 									- Travail avec la méthode Agile (Scrum)
 								</div>
 							</div>
-
 						</div>
 
 						<div class="row row-stage stage2">
-
-						<div class="col-3-3">
+							<div class="col-3-3">
 								<div class="title-lev3 title-parcours-diplomes-nom hidden">
 									<div class="mmi stage">Stage :</div> Agence Interactive (Lyon)
 									- Intégration de contenus (textes, images) via CMS
@@ -206,7 +196,6 @@
 						</div>
 
 						<div class="row row-stage stage3">
-							
 							<div class="col-3-3">
 								
 								<div class="title-lev3 title-parcours-diplomes-nom">
@@ -215,14 +204,10 @@
 									- Création d’un site web sous SharePoint
 									- JavaScript, HTML, CSS, .NET
 								</div>
-
 							</div>
-
-
 						</div>
 
 						<div class="row row-stage stage4">
-
 							<div class="col-3-3">
 								<div class="title-lev3 title-parcours-diplomes-nom">
 									<div class="ducci stage">Stage :</div> agence Mcube (Lyon)
@@ -230,19 +215,14 @@
 									- GULP, BRUNCH, SASS, GIT 
 								</div>
 							</div>
-
-
 						</div>
 
 						<div class="row row-stage stage5">
-							
 							<div class="col-3-3">
 								<div class="title-lev3 title-parcours-diplomes-nom">
 									<div class="cim stage">Stage :</div> Dès mars pour 4 à 6 mois et lieu à définir !
-
 								</div>
 							</div>
-
 						</div>
 
 					</div>
@@ -253,99 +233,95 @@
 
 			<div class="interets">
 
-			<div class="row">
-				<div class="center-800-max"> 
-					<div class="col-2-3">
-						<div class="title-lev1 title-monsite title-interests">
-							Intérêts
+				<div class="row">
+					<div class="center-800-max"> 
+						<div class="col-2-3">
+							<div class="title-lev1 title-monsite title-interests">
+								Intérêts
+							</div>
+							<div class="title-filet">
+							</div>
 						</div>
-						<div class="title-filet">
-						</div>
+						<div class="clear"></div>
 					</div>
-					<div class="clear"></div>
 				</div>
-			</div>
 
 			<div class="center-800-max padding-add"> 
 
-				<div class="competences-web">
+				<div class="interets-web">
 
 					<div class="col-1-3 col-angular">
-						<div class="competences web angular img"></div>
+						<div class="interets web angular img"></div>
 					</div>
 
 					<div class="col-1-3 col-git">
-						<div class="competences web git img"></div>
+						<div class="interets web git img"></div>
 					</div>
 
 					<div class="col-1-3 col-css">
-						<div class="competences web css img"></div>
+						<div class="interets web css img"></div>
 					</div>
 
-					<!-- <div class="col-1-3 col-js">
-						<img src="images/competences/web/js.png" alt="screen" class="competences web js img" />
-					</div> -->
-
 					<div class="col-1-3 col-js">
-						<div class="competences web js img"></div>
+						<div class="interets web js img"></div>
 					</div>
 
 					<div class="col-1-3 col-html">
-						<div class="competences web html img"></div>
+						<div class="interets web html img"></div>
 					</div>
 
 				</div>
 
-				<div class="competences-web-2">
+				<div class="interets-web-2">
 
-						<div class="row-php">
+					<div class="row-php">
 
-							<div class="col-1-2 col-php">
-								<div class="competences crea php img"></div>
-							</div>
+						<div class="col-1-2 col-php">
+							<div class="interets crea php img"></div>
+						</div>
 
-							<div class="col-2-2 col-mysql">
-								<div class="competences crea mysql img"></div>
-							</div>
-
+						<div class="col-2-2 col-mysql">
+							<div class="interets crea mysql img"></div>
 						</div>
 
 					</div>
 
-				<div class="competences-crea">
+				</div>
 
-						<div class="row-in">
+				<div class="interets-crea">
 
-							<div class="col-1-2 col-in">
-								<div class="competences crea in img"></div>
-							</div>
+					<div class="row-in">
 
-							<div class="col-2-2 col-ps">
-								<div class="competences crea ps img"></div>
-							</div>
-
+						<div class="col-1-2 col-in">
+							<div class="interets crea in img"></div>
 						</div>
-						<div class="row-ai">
 
-							<div class="col-1-2 col-ai">
-								<div class="competences crea ai img"></div>
-							</div>
-
-							<div class="col-2-2 col-ae">
-								<div class="competences crea ae img"></div>
-							</div>
-
+						<div class="col-2-2 col-ps">
+							<div class="interets crea ps img"></div>
 						</div>
-						<div class="row-pe">
 
-							<div class="col-1-2 col-pe">
-								<div class="competences crea pe img"></div>
-							</div>
+					</div>
 
-							<div class="col-2-2 col-au">
-								<div class="competences crea au img"></div>
-							</div>
+					<div class="row-ai">
 
+						<div class="col-1-2 col-ai">
+							<div class="interets crea ai img"></div>
+						</div>
+
+						<div class="col-2-2 col-ae">
+							<div class="interets crea ae img"></div>
+						</div>
+
+					</div>
+
+					<div class="row-pe">
+
+						<div class="col-1-2 col-pe">
+							<div class="interets crea pe img"></div>
+						</div>
+
+						<div class="col-2-2 col-au">
+							<div class="interets crea au img"></div>
 						</div>
 
 					</div>
@@ -354,38 +330,39 @@
 
 			</div>
 
-			<div class="center-800-max padding-add"> 
+		</div>
 
-				<footer class="footer">
-						
-					<a class="a-linkedin" href="https://www.linkedin.com/?trk=hb-0-h-logo" target="_blank">
-						<div class="col-1-3">
-							<div class="linkedin">
-							</div>
+		<div class="center-800-max padding-add"> 
+
+			<footer class="footer">
+					
+				<a class="a-linkedin" href="https://www.linkedin.com/?trk=hb-0-h-logo" target="_blank">
+					<div class="col-1-3">
+						<div class="linkedin">
 						</div>
-					</a>
-						
-					<a class="a-github" href="https://github.com/CamilleCastillo15/" target="_blank">
-						<div class="col-1-3">
-							<div class="github">
-							</div>
+					</div>
+				</a>
+					
+				<a class="a-github" href="https://github.com/CamilleCastillo15/" target="_blank">
+					<div class="col-1-3">
+						<div class="github">
 						</div>
-					</a>
+					</div>
+				</a>
 
-					<a class="a-behance" href="https://www.behance.net/camomille069" target="_blank">	
-						<div class="col-1-3">
-							<div class="behance">
-							</div>
+				<a class="a-behance" href="https://www.behance.net/camomille069" target="_blank">	
+					<div class="col-1-3">
+						<div class="behance">
 						</div>
-					</a>
+					</div>
+				</a>
 
-				</footer>
+			</footer>
 
-			</div>
+		</div>
+		
+		<script src="include/js/scripts/scripts.min.js"></script>
 
-				<!-- <script src="include/js/scripts/animations.js"></script> -->
-				<script src="include/js/scripts/scripts.min.js"></script>
+	 </body>
 
-		 </body>
-
-     </html>
+ </html>

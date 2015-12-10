@@ -1,5 +1,5 @@
 
-.competences {
+.interets {
 
 		// visibility:hidden;
 
@@ -32,7 +32,7 @@
 
 }
 
-.competences.crea {
+.interets.crea {
 
 	&:hover {
 
@@ -66,21 +66,21 @@
 
 @include mq($from: tablet) {
 
-	.competences-web {
+	.interets-web {
 
 		height:708px;
 		margin-top:200px;
 
 	}
 
-	.competences-crea {
+	.interets-crea {
 		
 		// margin-top:150px;
 		height:595px;
 
 	}
 
-	.competences-web-2 {
+	.interets-web-2 {
 		
 		margin-left:200px;
 		height:328px;
@@ -103,7 +103,7 @@
 
 		position:relative;
 
-		background-image: url(../images/competences/web/angular.png);
+		background-image: url(../images/interets/web/angular.png);
 
 		max-height:208px;
 		max-width:205px;
@@ -126,7 +126,7 @@
 
 		&:hover {
 
-			background-image: url(../images/competences/web/hover/angular_hover.png);
+			background-image: url(../images/interets/web/hover/angular_hover.png);
 			
 		}
 
@@ -147,7 +147,7 @@
 	.git {
 
 
-		background-image: url(../images/competences/web/git.png);
+		background-image: url(../images/interets/web/git.png);
 
 		max-height:208px;
 		max-width:205px;
@@ -167,7 +167,7 @@
 
 		&:hover {
 
-			background-image: url(../images/competences/web/hover/git_hover.png);
+			background-image: url(../images/interets/web/hover/git_hover.png);
 			
 		}
 
@@ -188,7 +188,7 @@
 		-webkit-animation-delay: 2.5s;
 	    animation-delay: 2.5s;
 
-		background-image: url(../images/competences/web/js.png);
+		background-image: url(../images/interets/web/js.png);
 
 		max-height:369px;
 		max-width:369px;
@@ -206,7 +206,7 @@
 
 		&:hover {
 
-			background-image: url(../images/competences/web/hover/js_hover.png);
+			background-image: url(../images/interets/web/hover/js_hover.png);
 			
 		}
 
@@ -227,7 +227,7 @@
 		-webkit-animation-delay: 6s;
 	    animation-delay: 6s;
 
-		background-image: url(../images/competences/web/css.png);
+		background-image: url(../images/interets/web/css.png);
 
 		max-height:317px;
 		max-width:317px;
@@ -244,7 +244,7 @@
 
 		&:hover {
 
-			background-image: url(../images/competences/web/hover/css_hover.png);
+			background-image: url(../images/interets/web/hover/css_hover.png);
 			
 		}
 
@@ -256,7 +256,7 @@
 
 	.html {
 
-		background-image: url(../images/competences/web/html.png);
+		background-image: url(../images/interets/web/html.png);
 
 		max-height:308px;
 		max-width:308px;
@@ -275,7 +275,7 @@
 
 		&:hover {
 
-			background-image: url(../images/competences/web/hover/html_hover.png);
+			background-image: url(../images/interets/web/hover/html_hover.png);
 			
 		}
 
@@ -321,7 +321,7 @@
 		position:relative;
 		z-index:1;
 
-		background-image: url(../images/competences/crea/indesign.png);
+		background-image: url(../images/interets/crea/indesign.png);
 
 		max-height:216px;
 		max-width:216px;
@@ -339,7 +339,7 @@
 
 		&:hover {
 
-			background-image: url(../images/competences/crea/hover/indesign_hover.png);
+			background-image: url(../images/interets/crea/hover/indesign_hover.png);
 			
 		}
 	}
@@ -359,7 +359,7 @@
 		position:relative;
 		z-index:4;
 		
-		background-image: url(../images/competences/crea/photoshop.png);
+		background-image: url(../images/interets/crea/photoshop.png);
 
 		max-height:269px;
 		max-width:269px;
@@ -379,7 +379,7 @@
 
 		&:hover {
 
-			background-image: url(../images/competences/crea/hover/photoshop_hover.png);
+			background-image: url(../images/interets/crea/hover/photoshop_hover.png);
 			
 		}
 
@@ -400,7 +400,7 @@
 		position:relative;
 		z-index:5;
 
-		background-image: url(../images/competences/crea/illustrator.png);
+		background-image: url(../images/interets/crea/illustrator.png);
 
 		max-height:269px;
 		max-width:269px;
@@ -420,7 +420,7 @@
 
 		&:hover {
 
-			background-image: url(../images/competences/crea/hover/illustrator_hover.png);
+			background-image: url(../images/interets/crea/hover/illustrator_hover.png);
 			
 		}
 
@@ -441,7 +441,7 @@
 		position:relative;
 		z-index:3;
 
-		background-image: url(../images/competences/crea/aftereffects.png);
+		background-image: url(../images/interets/crea/aftereffects.png);
 
 		max-height:243px;
 		max-width:243px;
@@ -462,7 +462,7 @@
 
 		&:hover {
 
-			background-image: url(../images/competences/crea/hover/aftereffects_hover.png);
+			background-image: url(../images/interets/crea/hover/aftereffects_hover.png);
 			
 		}
 
@@ -483,7 +483,7 @@
 		position:relative;
 		z-index:2;
 
-		background-image: url(../images/competences/crea/premiere.png);
+		background-image: url(../images/interets/crea/premiere.png);
 
 		max-height:216px;
 		max-width:216px;
@@ -503,7 +503,7 @@
 
 		&:hover {
 
-			background-image: url(../images/competences/crea/hover/premiere_hover.png);
+			background-image: url(../images/interets/crea/hover/premiere_hover.png);
 			
 		}
 
@@ -524,7 +524,7 @@
 		position:relative;
 		z-index:1;
 
-		background-image: url(../images/competences/crea/audition.png);
+		background-image: url(../images/interets/crea/audition.png);
 
 		max-height:216px;
 		max-width:216px;
@@ -544,7 +544,7 @@
 
 		&:hover {
 
-			background-image: url(../images/competences/crea/hover/audition_hover.png);
+			background-image: url(../images/interets/crea/hover/audition_hover.png);
 			
 		}
 
@@ -565,7 +565,7 @@
 		position:relative;
 		z-index:1;
 
-		background-image: url(../images/competences/web/php.png);
+		background-image: url(../images/interets/web/php.png);
 
 		max-height:248px;
 		max-width:245px;
@@ -585,7 +585,7 @@
 
 		&:hover {
 
-			background-image: url(../images/competences/web/hover/php_hover.png);
+			background-image: url(../images/interets/web/hover/php_hover.png);
 			
 		}
 
@@ -606,7 +606,7 @@
 		position:relative;
 		z-index:1;
 
-		background-image: url(../images/competences/web/mysql.png);
+		background-image: url(../images/interets/web/mysql.png);
 
 		max-height:200px;
 		max-width:197px;
@@ -626,7 +626,7 @@
 
 		&:hover {
 
-			background-image: url(../images/competences/web/hover/mysql_hover.png);
+			background-image: url(../images/interets/web/hover/mysql_hover.png);
 			
 		}
 
