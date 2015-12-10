@@ -296,6 +296,22 @@
 
 				</div>
 
+				<div class="competences-web-2">
+
+						<div class="row-php">
+
+							<div class="col-1-2 col-php">
+								<div class="competences crea php img"></div>
+							</div>
+
+							<div class="col-2-2 col-mysql">
+								<div class="competences crea mysql img"></div>
+							</div>
+
+						</div>
+
+					</div>
+
 				<div class="competences-crea">
 
 						<div class="row-in">
@@ -333,6 +349,14 @@
 						</div>
 
 					</div>
+
+				</div>
+
+			</div>
+
+			<div class="center-800-max padding-add"> 
+
+				<div class="footer">
 
 				</div>
 

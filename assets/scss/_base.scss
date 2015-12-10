@@ -104,6 +104,7 @@ body {
 	}
 }
 
+
 .texte {
 			@include font-size(15);
 			color:black;
@@ -394,6 +395,30 @@ p.texte_3 {
 .interets{
 
 	visibility:hidden;
+
+	@include mq($from: tablet) {
+		
+		height:2800px
+
+	}
+
+	@include mq($from: mobileLandscape, $until: tablet) {
+		
+		height:5200px;
+
+	}
+
+	@include mq($from: mobile, $until: mobileLandscape) {
+		
+		height:5400px;
+
+	}
+
+	@include mq($until: mobile) {
+		
+		height:5500px;
+
+	}
 
 }
 
@@ -772,7 +797,7 @@ p.texte_3 {
 		@include transition(1s, ease-in-out);
 
 		// -webkit-animation: moveclouds 15s linear infinite, sideWays 4s ease-in-out infinite alternate; /* Chrome, Safari, Opera */
-	    -webkit-animation: bubble 2s linear infinite, 4s ease-in-out;  
+	    -webkit-animation: bubble 1.5s linear infinite, 4s ease-in-out;  
 
 		&:hover {
 
@@ -812,13 +837,6 @@ p.texte_3 {
     }
 }
 
-/* Chrome, Safari, Opera */
-@-webkit-keyframes bubble {
-    0%   {top:0px;}
-    50%  {top:70px;}
-    100% {top:0px;}
-}
-
 /* Standard syntax */
 @keyframes bubble {
     0%   {top:0px;}
@@ -836,18 +854,24 @@ p.texte_3 {
 
 	.competences-web {
 
-		position:relative;
 		height:708px;
 
 	}
 
 	.competences-crea {
 		
-		position:relative;
-		margin-top:300px;
+		// margin-top:150px;
 		height:595px;
 
 	}
+
+	.competences-web-2 {
+		
+		margin-left:200px;
+		height:328px;
+
+	}
+
 
 }
 
@@ -1208,7 +1232,7 @@ p.texte_3 {
 		max-width:243px;
 
 		-webkit-animation-delay: 3.5s;
-	    animation-delay: 3.5s;
+	    animation-delay: 3s;
 		
 
 		@include mq($from: tablet) {
@@ -1306,6 +1330,88 @@ p.texte_3 {
 		&:hover {
 
 			background-image: url(../images/competences/crea/hover/audition_hover.png);
+			
+		}
+
+	}
+
+}
+
+.col-php {
+
+	@include mq($from: tablet) {
+
+		width:30%;
+
+	}
+
+	.php {
+
+		position:relative;
+		z-index:1;
+
+		background-image: url(../images/competences/web/php.png);
+
+		max-height:248px;
+		max-width:245px;
+
+		-webkit-animation-delay: 1.5s;
+	    animation-delay: 1.5s;
+
+		@include mq($from: tablet) {
+
+			height:248px;
+			width:245px;
+			opacity:0.95;
+
+			margin-top:-110px;
+
+		}
+
+		&:hover {
+
+			background-image: url(../images/competences/web/hover/php_hover.png);
+			
+		}
+
+	}
+
+}
+
+.col-mysql {
+
+	@include mq($from: tablet) {
+
+		width:30%;
+
+	}
+
+	.mysql {
+
+		position:relative;
+		z-index:1;
+
+		background-image: url(../images/competences/web/mysql.png);
+
+		max-height:200px;
+		max-width:197px;
+
+		-webkit-animation-delay: 2s;
+	    animation-delay: 2s;
+
+		@include mq($from: tablet) {
+
+			height:200px;
+			width:197px;
+			opacity:0.95;
+
+			margin-top:-110px;
+
+		}
+
+		&:hover {
+
+			background-image: url(../images/competences/web/hover/mysql_hover.png);
 			
 		}
 
@@ -1457,6 +1563,7 @@ ul.ul-menu-desktop {
     background-color: #1f1f1f;
     margin-top:73px;
     text-align: center;
+    position:relative;
 
     @include font-size(15);
 }
