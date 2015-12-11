@@ -231,7 +231,7 @@
 
 			</div>
 
-			<div class="interets">
+			<div class="interets-part">
 
 				<div class="row">
 					<div class="center-800-max"> 
@@ -338,21 +338,21 @@
 					
 				<a class="a-linkedin" href="https://www.linkedin.com/?trk=hb-0-h-logo" target="_blank">
 					<div class="col-1-3">
-						<div class="linkedin">
+						<div class="linkedin reseaux">
 						</div>
 					</div>
 				</a>
 					
 				<a class="a-github" href="https://github.com/CamilleCastillo15/" target="_blank">
 					<div class="col-1-3">
-						<div class="github">
+						<div class="github reseaux">
 						</div>
 					</div>
 				</a>
 
 				<a class="a-behance" href="https://www.behance.net/camomille069" target="_blank">	
 					<div class="col-1-3">
-						<div class="behance">
+						<div class="behance reseaux">
 						</div>
 					</div>
 				</a>

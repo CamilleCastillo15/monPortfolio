@@ -71,8 +71,9 @@ function ShowInterests()	{
 
 	tl = new TimelineLite({delay:0.4});
 
+	TweenLite.set(".interets-part", {visibility:"visible"})
 	TweenLite.set(".interets", {visibility:"visible"})
 
-	tl.from(".interets", 0.6, {y:30, opacity:0.5}, "-=0.3")
-
+	tl.from(".interets-part", 0.6, {y:30, opacity:0.6})
+	tl.from(".interets", 0.6, {y:30, opacity:0.6})
 }

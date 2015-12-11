@@ -283,36 +283,6 @@ body {
 
 }
 
-.interets{
-
-	visibility:hidden;
-
-	@include mq($from: tablet) {
-		
-		height:2800px
-
-	}
-
-	@include mq($from: mobileLandscape, $until: tablet) {
-		
-		height:5200px;
-
-	}
-
-	@include mq($from: mobile, $until: mobileLandscape) {
-		
-		height:5400px;
-
-	}
-
-	@include mq($until: mobile) {
-		
-		height:5500px;
-
-	}
-
-}
-
 .clear {
 
 	clear: both;
@@ -434,36 +404,68 @@ body {
 
     }
 
-    .linkedin {
+    .reseaux {
 
-		background-image: url(../images/footer/linkedin_v2.png);
 		background-repeat:no-repeat;
-		background-size: 20% auto;
+		
+		@include mq($until:mobileLandscape){	
+
+			background-size: 50% auto;
+
+		}
+
+		@include mq($from:mobileLandscape){
+
+			background-size: 20% auto;
+			
+		}
+
+		background-size: 50% auto;
 		background-position:center center;
 		width:100%;
 		height:100%;
+
+		&:hover {
+
+			 @include transition(1s, ease-in-out);
+
+		}
+
+    }
+
+    .linkedin {
+
+		background-image: url('../images/footer/linkedin_v3.png');
+
+		&:hover {
+
+			background-image: url('../images/footer/hover/linkedin_hover.png');
+
+		}
 
     }
 
 	.github {
 
-		background-image: url(../images/footer/github_v2.png);
-		background-repeat:no-repeat;
-		background-size: 20% auto;
-		background-position:center center;
-		width:100%;
-		height:100%;
+		background-image: url('../images/footer/github_v3.png');
+
+		&:hover {
+
+			background-image: url('../images/footer/hover/github_hover.png');
+
+		}
 
     }
 
     .behance {
 
-		background-image: url(../images/footer/behance_v2.png);
-		background-repeat:no-repeat;
-		background-size: 20% auto;
-		background-position:center center;
-		width:100%;
-		height:100%
+		background-image: url('../images/footer/behance_v3.png');
+
+		&:hover {
+
+			background-image: url('../images/footer/hover/behance_hover.png');
+
+		}
 
     }
 
