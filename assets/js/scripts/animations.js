@@ -5,7 +5,7 @@ var flag3 = true;
 $(window).on('scroll', function() {
 
     var y_scroll_pos = window.pageYOffset;
-    console.log(y_scroll_pos);
+    // console.log(y_scroll_pos);
 
     var scroll_pos_ShowDev = 200;  
     var scroll_pos_ShowParcours = 800;   

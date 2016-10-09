@@ -46,6 +46,7 @@ body {
 
 .texte_presentation {
 
+ 	font-family: "ProximaNovaLight", sans-serif;
 	color: #585858;
 	@include font-size(16);	
     line-height: 1.4em;
@@ -81,8 +82,14 @@ body {
 }
 
 .title-filet {
+
+	@include mq($until: tablet) {
+		margin:0 auto;
+	}
+
+
     width: 150px;
-    height: 2px;
+    height: 1.2px;
     background-color: black;
     margin: 5px 10px 0px 0px;
 }
@@ -105,8 +112,9 @@ body {
 
 .title-lev1 {
 	text-transform: uppercase;
-	font-family: Proxima Nova,serif;
+	font-family: "ProximaNovaBold", sans-serif;
 	color: #000;
+	font-weight:100;
     @include font-size(28);
 
 	@include mq($from: mobileLandscape, $until: tablet) {
@@ -117,7 +125,7 @@ body {
 
 .title-lev2 {
 	text-transform: uppercase;
-	font-family: Proxima Nova,serif;
+	font-family: "ProximaNovaRegular", sans-serif;
 	color: #000;
 
 	@include font-size(20);
@@ -142,11 +150,18 @@ body {
 }
 
 .title-lev3 {
-	font-family: Adobe Garamond Pro,serif;
+	// font-family: ProximaNovaRegular,serif;
+	font-family: "ProximaNovaRegular", sans-serif;
 	color: #000;
 
 	@include font-size(16);
 	line-height:1.5;
+
+	&:first-line {
+
+		line-height:1;
+
+	}
 
 	@include mq($from: mobileLandscape, $until: tablet) {
         text-align: center;
@@ -156,7 +171,7 @@ body {
 
 .title-lev4 {
 	text-transform: uppercase;
-	font-family: Proxima Nova,serif;
+	font-family: "ProximaNovaLight", sans-serif;
 	color: $color-default;
 	// padding:10px 0px 0px;
 	@include font-size(15);
@@ -209,13 +224,14 @@ body {
     @include mq($from: desktop, $until: wide) {
          background-image: url(../images/header/header_1024.jpg);
          background-size: 100% auto;
-         height:870px;
+         height:720px;
     }
 
 	@include mq($from: wide, $until: xwide) {
          background-image: url(../images/header/header_1400.jpg);
          background-size: 100% auto;
          max-height:670px;
+         height:570px;
     }
 
     @include mq($from: xwide) {
@@ -223,6 +239,7 @@ body {
          background-size: 100% auto;
          max-height:670px;
          max-width: 1600px;
+         height:470px;
     }
 
 }
@@ -231,7 +248,7 @@ body {
 
 .header-title {
 	text-align: center;
-    font-family: Proxima Nova,serif;
+    font-family: "ProximaNovaRegular", sans-serif;
     color: #fff;
 
     text-transform: uppercase;

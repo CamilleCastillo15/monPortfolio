@@ -40,7 +40,8 @@
 		@include transition(1s, ease-in-out);
 
 		// -webkit-animation: moveclouds 15s linear infinite, sideWays 4s ease-in-out infinite alternate; /* Chrome, Safari, Opera */
-	    -webkit-animation: bubble 1.5s linear infinite, 4s ease-in-out;  
+	    -webkit-animation: bubble 2s linear infinite, 4s cubic-bezier(0.420, 0.000, 0.580, 1.000);  
+	    animation-direction:reverse;
 
 		&:hover {
 
@@ -82,15 +83,9 @@
 
 /* Standard syntax */
 @keyframes bubble {
-    0%   {top:0px;}
-    12.5%   {top:1px;}
-    25%   {top:2px;}
-    37.5%   {top:3px;}
-    50%  {top:4px;}
-    67.5%   {top:3px;}
-    75%   {top:2px;}
-    87,5%   {top:1px;}
-    100% {top:0px;}
+    0%   {transform : translate(0,0)}
+    50%  {transform : translate(0,4px)}
+    100% {transform : translate(0,0)}
 }
 
 @include mq($from: tablet) {
@@ -112,7 +107,7 @@
 	.interets-web-2 {
 		
 		margin-left:200px;
-		height:328px;
+		height:198px;
 
 	}
 

@@ -2,6 +2,7 @@
  * IMPORTS 
  */
 @import "reset";
+@import "fonts";
 @import "mq";
 @import "mymixins";
 @import "variables";
@@ -11,4 +12,11 @@
 @import "devfront";
 @import "parcours";
 @import "interets";
+
+/** slider **/
+// @import "bootstrap";
+@import "slider";
+@import "dark";
+@import "fonts-icons";
+@import "animate";
 
