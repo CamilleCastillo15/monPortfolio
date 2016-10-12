@@ -45,7 +45,9 @@
 	display: block;
 	width: 100%;
 	padding: $grid-gutter-base;
-	float: left;
+	// float: left;
+	display:inline-block;
+	vertical-align:top;
 
 	@include mq($from: tablet) {
 		padding: $grid-gutter-tablet;
