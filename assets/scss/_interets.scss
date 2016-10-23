@@ -10,39 +10,21 @@
 
 	visibility:hidden;
 
-	// @include mq($from: tablet) {
-		
-	// 	height:2800px
-
-	// }
-
-	// @include mq($from: mobileLandscape, $until: tablet) {
-		
-	// 	height:5200px;
-
-	// }
-
-	// @include mq($from: mobile, $until: mobileLandscape) {
-		
-	// 	height:5400px;
-
-	// }
-
-	// @include mq($until: mobile) {
-		
-	// 	height:5500px;
-
-	// }
-
 }
 
 .interets {
 
+		&.img {
+
+			background-image: url(../images/header/photo_banniere_portfolio.jpg);
+
+		}
+
 		.text-bulles {
 
-			text-transform: uppercase;
-			font-family: ProximaNovaBold, sans-serif;
-			font-size: 7.5rem;
+			// text-transform: uppercase;
+			font-family: ProximaNovaSemibold, sans-serif;
+			
 			position:absolute;
 			top:50%;
 			left:50%;
@@ -51,26 +33,21 @@
 		    transform: translate(-50%, -50%);
 		    color: #f5f0f0;
 		    mix-blend-mode: overlay;
-		    letter-spacing: 0.5rem;
-
-		    &:hover {
-
-				mix-blend-mode: normal;
-				// color: white;
-				@include transition(1s, ease-in-out);
-				
-			}
+		    
+		    letter-spacing: 0.75rem;
+		    width: 100%;
+    		text-align: center;
+			
+			@include transition(1s, ease-in-out);
 
 		}
-
-		// visibility:hidden;
 
 		position:relative;
 
 		background-repeat:no-repeat;
 		background-position: center top;
-		background-size: 100% auto;
 		@include transition(1s, ease-in-out);
+		border-radius:50rem;
 
 		// -webkit-animation: moveclouds 15s linear infinite, sideWays 4s ease-in-out infinite alternate; /* Chrome, Safari, Opera */
 	    -webkit-animation: bubble 2s linear infinite, 4s cubic-bezier(0.420, 0.000, 0.580, 1.000);  
@@ -80,16 +57,42 @@
 
 			cursor:pointer;
 			 @include translate(3em, 10em);
-			 transform: scale(1.012);
+			 transform: scale(1.5);
 			 z-index:1000 !important;
 
-		}
+			.text-bulles {
 
+				mix-blend-mode: normal;
+				@include transition(1s, ease-in-out);
+
+			}
+
+		}
 
 	    @include mq($until: tablet) {
 
 			width:100%;
 			height:100%;
+
+	    }
+
+	    .bkg-color {
+
+			@include transition(1s, ease-in-out);
+			opacity: 0.15;
+
+			&:hover {
+
+				opacity: 0.25;
+
+				.text-bulles {
+
+					mix-blend-mode: normal;
+					@include transition(1s, ease-in-out);
+
+				}
+
+			}
 
 	    }
 
@@ -160,18 +163,16 @@
 
 		position:relative;
 
-		background-image: url(../images/interets/web/angular.png);
+		background-position: 20% 0%;
 
-		max-height:208px;
-		max-width:205px;
+		height:208px;
+		width:205px;
 
 		-webkit-animation-delay: 1s;
 	    animation-delay: 1s;
 
 		@include mq($from: tablet) {
 
-			 	height:208px;
-				width:205px;
 				margin-top: -122px;
 				margin-left: 330px;
 				opacity:0.95;
@@ -183,52 +184,12 @@
 
 		&:hover {
 
-			background-image: url(../images/interets/web/hover/angular_hover.png);
+			background-position: 25% 0%;
 			
 		}
 
 	}
 
-
-}
-
-.col-git {
-
-	@include mq($from: tablet) {
-
-		width:0%;
-
-	}
-
-
-	.git {
-
-
-		background-image: url(../images/interets/web/git.png);
-
-		max-height:208px;
-		max-width:205px;
-
-		-webkit-animation-delay: 3.5s;
-	    animation-delay: 3.5s;
-
-		@include mq($from: tablet) {
-
-			width:198px;
-			height:196px;
-			margin-top:-110px;
-			margin-left:550px;
-
-		}
-
-
-		&:hover {
-
-			background-image: url(../images/interets/web/hover/git_hover.png);
-			
-		}
-
-	}
 
 }
 
@@ -245,25 +206,26 @@
 		-webkit-animation-delay: 2.5s;
 	    animation-delay: 2.5s;
 
-		background-image: url(../images/interets/web/js_v2.png);
+		background-position: 0% 34%;
 
-		max-height:369px;
-		max-width:369px;
+		font-size: 7.5rem;
+
+		height:369px;
+		width:369px;
 
 
 		@include mq($from: tablet) {
 
-			 	height:369px;
-				width:369px;
-				opacity:0.95;
-				z-index:0;
+			opacity:0.95;
+			z-index:0;
 
 		}
 
 
 		&:hover {
 
-			background-position:bottom bottom;
+			background-position: 5% 34%;
+			@include transition(1s, ease-in-out);
 			
 		}
 
@@ -284,15 +246,15 @@
 		-webkit-animation-delay: 6s;
 	    animation-delay: 6s;
 
-		background-image: url(../images/interets/web/css.png);
+		background-position: 35% 36%;
 
-		max-height:317px;
-		max-width:317px;
+		font-size: 4rem;
+
+		height:317px;
+		width:317px;
 
 		@include mq($from: tablet) {
 
-			height:317px;
-			width:317px;
 			margin-top:190px;
 			opacity:0.95;
 			z-index:50;
@@ -301,7 +263,7 @@
 
 		&:hover {
 
-			background-image: url(../images/interets/web/hover/css_hover.png);
+			background-position: 40% 36%;
 			
 		}
 
@@ -313,18 +275,18 @@
 
 	.html {
 
-		background-image: url(../images/interets/web/html.png);
+		background-position: 22% 40%;
 
-		max-height:308px;
-		max-width:308px;
+		font-size: 3.5rem;
+
+		height:308px;
+		width:308px;
 
 		-webkit-animation-delay: 1.5s;
 	    animation-delay: 1.5s;
 
 	    @include mq($from: tablet) {
 
-			height:308px;
-			width:308px;
 			margin-top:110px;
 			opacity:0.95;
 
@@ -332,7 +294,7 @@
 
 		&:hover {
 
-			background-image: url(../images/interets/web/hover/html_hover.png);
+			background-position: 27% 40%;
 			
 		}
 
@@ -378,27 +340,51 @@
 		position:relative;
 		z-index:1;
 
-		background-image: url(../images/interets/crea/indesign.png);
+		background-position: 38% 50%;
 
-		max-height:216px;
-		max-width:216px;
+		font-size: 5.5rem;
+
+		height:216px;
+		width:216px;
 
 		-webkit-animation-delay: 5s;
 	    animation-delay: 5s;
 
 		@include mq($from: tablet) {
 
-			height:216px;
-			width:216px;
 			opacity:0.95;
 
 		}
 
 		&:hover {
 
-			background-image: url(../images/interets/crea/hover/indesign_hover.png);
+			background-position: 43% 50%;
 			
 		}
+
+		.bkg-color {
+
+			height:216px;
+			width:216px;
+			border-radius:50rem;
+
+			background-color:rgb(252,92,162);
+
+			@include mq($from: tablet) {
+
+				height:216px;
+				width:216px;
+
+			}
+
+			&:hover {
+
+				background-color:rgb(252,92,162);
+				
+			}
+
+		}
+
 	}
 
 }
@@ -416,10 +402,12 @@
 		position:relative;
 		z-index:4;
 		
-		background-image: url(../images/interets/crea/photoshop.png);
+		background-position: 0% 34%;
 
-		max-height:269px;
-		max-width:269px;
+		font-size: 5.5rem;
+
+		height:269px;
+		width:269px;
 
 		-webkit-animation-delay: 6.5s;
 	    animation-delay: 6.5s;
@@ -427,17 +415,30 @@
 		@include mq($from: tablet) {
 
 			margin-top:30px;
-
-			height:269px;
-			width:269px;
 			opacity:0.95;
 
 		}
 
 		&:hover {
 
-			background-image: url(../images/interets/crea/hover/photoshop_hover.png);
+			background-position: 5% 34%;
 			
+		}
+
+		.bkg-color {
+
+			height:269px;
+			width:269px;
+			border-radius:50rem;
+
+			background-color:rgb(36,209,246);
+
+			&:hover {
+
+				background-color:rgb(36,209,246);
+				
+			}
+
 		}
 
 	}
@@ -457,10 +458,12 @@
 		position:relative;
 		z-index:5;
 
-		background-image: url(../images/interets/crea/illustrator.png);
+		background-position: 38% 50%;
 
-		max-height:269px;
-		max-width:269px;
+		font-size: 5.5rem;
+
+		height:269px;
+		width:269px;
 
 		-webkit-animation-delay: 4.5s;
 	    animation-delay: 4.5s;
@@ -477,8 +480,25 @@
 
 		&:hover {
 
-			background-image: url(../images/interets/crea/hover/illustrator_hover.png);
+			background-position: 43% 50%;
 			
+		}
+
+		.bkg-color {
+
+			border-radius:50rem;
+			background-color:rgb(249,137,36);
+
+			height:269px;
+			width:269px;
+
+
+			&:hover {
+
+				background-color:rgb(249,137,36);
+				
+			}
+
 		}
 
 	}
@@ -498,10 +518,12 @@
 		position:relative;
 		z-index:3;
 
-		background-image: url(../images/interets/crea/aftereffects.png);
+		background-position:28% 25%;
 
-		max-height:243px;
-		max-width:243px;
+		font-size: 5.5rem;
+
+		height:243px;
+		width:243px;
 
 		-webkit-animation-delay: 3.5s;
 	    animation-delay: 3s;
@@ -509,18 +531,31 @@
 
 		@include mq($from: tablet) {
 
-			height:243px;
-			width:243px;
 			opacity:0.95;
-
 			margin-top:-82px;
 
 		}
 
 		&:hover {
 
-			background-image: url(../images/interets/crea/hover/aftereffects_hover.png);
+			background-position: 33% 25%;
 			
+		}
+
+		.bkg-color {
+
+			height:243px;
+			width:243px;
+			border-radius:50rem;
+
+			background-color:rgb(208,162,255);
+
+			&:hover {
+
+				background-color:rgb(208,162,255);
+				
+			}
+
 		}
 
 	}
@@ -540,28 +575,44 @@
 		position:relative;
 		z-index:2;
 
-		background-image: url(../images/interets/crea/premiere.png);
+		background-position:28% 16%;
 
-		max-height:216px;
-		max-width:216px;
+		font-size: 5.5rem;
+
+		height:216px;
+		width:216px;
 
 		-webkit-animation-delay: 2s;
 	    animation-delay: 2s;
 
 		@include mq($from: tablet) {
 
-			height:216px;
-			width:216px;
 			opacity:0.95;
-
 			margin-top:-150px;
 
 		}
 
 		&:hover {
 
-			background-image: url(../images/interets/crea/hover/premiere_hover.png);
+			background-position:33% 16%;
 			
+		}
+
+		.bkg-color {
+
+			height:216px;
+			width:216px;
+			border-radius:50rem;
+
+			background-color:rgb(221,128,255);
+
+
+			&:hover {
+
+				background-color:rgb(221,128,255);
+				
+			}
+
 		}
 
 	}
@@ -581,27 +632,160 @@
 		position:relative;
 		z-index:1;
 
-		background-image: url(../images/interets/crea/audition.png);
+		background-position:28% 31%;
 
-		max-height:216px;
-		max-width:216px;
+		font-size: 5.5rem;
+
+		height:216px;
+		width:216px;
 
 		-webkit-animation-delay: 1.5s;
 	    animation-delay: 1.5s;
 
 		@include mq($from: tablet) {
 
-			height:216px;
-			width:216px;
 			opacity:0.95;
-
 			margin-top:-110px;
 
 		}
 
 		&:hover {
 
-			background-image: url(../images/interets/crea/hover/audition_hover.png);
+			background-position:33% 31%;
+			
+		}
+
+		.bkg-color {
+
+			height:216px;
+			width:216px;
+			border-radius:50rem;
+
+			background-color:rgb(36,220,199);
+
+			&:hover {
+
+				background-color:rgb(36,220,199);
+				
+			}
+
+		}
+
+	}
+
+}
+
+.col-git {
+
+	@include mq($from: tablet) {
+
+		width:0%;
+
+	}
+
+
+	.git {
+
+
+		background-position: 20% 20%;
+
+		font-size: 1.5rem;
+
+		width:198px;
+		height:196px;
+
+		-webkit-animation-delay: 3.5s;
+	    animation-delay: 3.5s;
+
+		@include mq($from: tablet) {
+
+			margin-top:-110px;
+			margin-left:620px;
+
+		}
+
+
+		&:hover {
+
+			background-position: 25% 20%;
+			
+		}
+
+	}
+
+}
+
+.col-gulp {
+
+	@include mq($from: tablet) {
+
+		width:0%;
+
+	}
+
+
+	.gulp {
+
+
+		background-position: 0% 20%;
+
+		font-size: 1.5rem;
+
+		width:198px;
+		height:196px;
+
+		-webkit-animation-delay: 1s;
+	    animation-delay: 1s;
+
+		@include mq($from: tablet) {
+
+			margin-left:550px;
+
+		}
+
+
+		&:hover {
+
+			background-position: 5% 20%;
+			
+		}
+
+	}
+
+}
+
+.col-bower {
+
+	@include mq($from: tablet) {
+
+		width:0%;
+
+	}
+
+
+	.bower {
+
+
+		background-position: 30% 10%;
+
+		font-size: 1.5rem;
+
+		width:128px;
+		height:128px;
+
+		-webkit-animation-delay: 2s;
+	    animation-delay: 2s;
+
+		@include mq($from: tablet) {
+
+			margin-left:650px;
+
+		}
+
+
+		&:hover {
+
+			background-position: 35% 10%;
 			
 		}
 
@@ -622,28 +806,42 @@
 		position:relative;
 		z-index:1;
 
-		background-image: url(../images/interets/web/php.png);
+		background-position: 43% 0;
 
-		max-height:248px;
-		max-width:245px;
+		font-size: 2.5rem;
+
+		height:248px;
+		width:245px;
 
 		-webkit-animation-delay: 1.5s;
 	    animation-delay: 1.5s;
 
 		@include mq($from: tablet) {
 
-			height:248px;
-			width:245px;
 			opacity:0.95;
-
-			// margin-top:-110px;
 
 		}
 
 		&:hover {
 
-			background-image: url(../images/interets/web/hover/php_hover.png);
+			background-position: 48% 0;
 			
+		}
+
+		.bkg-color {
+
+			height:248px;
+			width:245px;
+			border-radius:50rem;
+
+			background-color:#80878b;
+
+			&:hover {
+
+				background-color:#80878b;
+				
+			}
+
 		}
 
 	}
@@ -663,28 +861,208 @@
 		position:relative;
 		z-index:1;
 
-		background-image: url(../images/interets/web/mysql.png);
+		background-position: 40% 50%;
 
-		max-height:200px;
-		max-width:197px;
+		font-size: 2.5rem;
+
+		height:200px;
+		width:197px;
 
 		-webkit-animation-delay: 2s;
 	    animation-delay: 2s;
 
 		@include mq($from: tablet) {
 
-			height:200px;
-			width:197px;
 			opacity:0.95;
-
-			// margin-top:-110px;
 
 		}
 
 		&:hover {
 
-			background-image: url(../images/interets/web/hover/mysql_hover.png);
+			background-position: 45% 50%
 			
+		}	
+
+		.bkg-color {
+
+			height:200px;
+			width:197px;
+			border-radius:50rem;
+
+			background-color:#6d634c;
+
+			&:hover {
+
+				background-color:#6d634c;
+				
+			}
+
+		}
+
+	}
+
+}
+
+.col-java {
+
+	@include mq($from: tablet) {
+
+		width:0%;
+
+	}
+
+
+	.java {
+
+
+		background-position: 20% 20%;
+
+		font-size: 3rem;
+
+		width:258px;
+		height:258px;
+
+		-webkit-animation-delay: 1s;
+	    animation-delay: 1s;
+
+		@include mq($from: tablet) {
+
+			margin-top:-150px;
+			margin-left: 100px;
+
+		}
+
+
+		&:hover {
+
+			background-position: 25% 20%;
+			
+		}
+
+		.bkg-color {
+
+			width:258px;
+			height:258px;
+			border-radius:50rem;
+
+			background-color:#E01E21;
+
+			&:hover {
+
+				background-color:#E01E21;
+				
+			}
+
+		}
+
+	}
+
+}
+
+.col-objective {
+
+	@include mq($from: tablet) {
+
+		width:0%;
+
+	}
+
+
+	.objective {
+
+
+		background-position: 0% 20%;
+
+		font-size: 3rem;
+
+		width:258px;
+		height:258px;
+
+		-webkit-animation-delay: 3.5s;
+	    animation-delay: 3.5s;
+
+		@include mq($from: tablet) {
+
+			margin-left:0px;
+
+		}
+
+
+		&:hover {
+
+			background-position: 5% 20%;
+			
+		}
+
+		.bkg-color {
+
+			width:258px;
+			height:258px;
+			border-radius:50rem;
+
+			background-color:#55A1FF;
+
+			&:hover {
+
+				background-color:#55A1FF;
+				
+			}
+
+		}
+
+	}
+
+}
+
+.col-swift {
+
+	@include mq($from: tablet) {
+
+		width:0%;
+
+	}
+
+
+	.swift {
+
+
+		background-position: 30% 10%;
+
+		font-size: 3rem;
+
+		width:258px;
+		height:258px;
+
+		-webkit-animation-delay: 2.5s;
+	    animation-delay: 2.5s;
+
+		@include mq($from: tablet) {
+
+			margin-left: 150px;
+
+		}
+
+		&:hover {
+
+			background-position: 35% 10%;
+			
+		}
+
+
+		.bkg-color {
+
+			width:258px;
+			height:258px;
+			border-radius:50rem;
+
+			background-color:#FF7043;
+
+			&:hover {
+
+				background-color:#FF7043;
+				
+			}
+
 		}
 
 	}

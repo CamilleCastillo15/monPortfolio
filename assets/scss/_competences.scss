@@ -1,0 +1,53 @@
+.competences {
+
+	.photo-comp {
+
+		padding-left: 0;
+		padding-right: 0;
+
+		.bkg-color {
+
+			background-color: black;
+			opacity: 0.5;
+			width: 100%;
+			height: 100%;
+
+		}
+
+	}
+
+	.img-competences {
+
+		position:relative;
+
+		background-repeat:no-repeat;
+		background-position: center top;
+		background-size: 70% auto;
+		
+		width:80%;
+		height:100%;
+
+	}
+
+	.img-responsifs {
+
+		width: 38px;
+		height: 64px;
+
+		background-image: url(../images/competences/icones/phone_64px.png);
+	}
+
+	.col-md-4 {
+
+		.feature-box {
+
+			position:absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+
+		}
+
+	}
+
+}
