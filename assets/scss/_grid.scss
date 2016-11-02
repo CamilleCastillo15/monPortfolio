@@ -41,7 +41,8 @@
 .col-1-4,
 .col-2-4,
 .col-3-4,
-.col-4-4 {
+.col-4-4,
+.col-1-5 {
 	display: block;
 	width: 100%;
 	padding: $grid-gutter-base;
@@ -95,5 +96,11 @@
 .col-3-4 {
 	@include mq($from: tablet) {
 		width: percentage( 3/4 );
+	}
+}
+
+.col-1-5 {
+	@include mq($from: tablet) {
+		width: percentage( 1/5 );
 	}
 }
