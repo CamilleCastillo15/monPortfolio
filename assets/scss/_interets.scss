@@ -128,22 +128,54 @@
 
 	.interets-web {
 
-		// height:708px;
-		margin-top:200px;
-
-	}
-
-	.interets-crea {
-		
-		// margin-top:150px;
-		// height:595px;
+		display: inline-block;
+		vertical-align: top;
+		height: 410px;
+    	width: 460px;
 
 	}
 
 	.interets-web-2 {
 		
-		margin-left:200px;
-		// height:198px;
+		display: inline-block;
+		vertical-align: top;
+		width: 200px;
+    	height: 220px;
+    	margin-right: 200px;
+
+	}
+
+	.interets-crea {
+		
+		display: inline-block;
+		vertical-align: top;
+		margin-top: 100px;
+		margin-right: 50px;
+		width: 320px;
+    	height: 350px;
+
+	}
+
+	.interets-workflow {
+		
+		display: inline-block;
+		vertical-align: top;
+		margin-top: 100px;
+		margin-right: 50px;
+		width: 150px;
+    	height: 175px;
+
+
+	}
+
+	.interets-mobiles {
+
+		display: inline-block;
+		vertical-align: top;
+		margin-top: 100px;
+		width: 320px;
+    	height: 275px;
+
 
 	}
 
@@ -152,12 +184,11 @@
 
 .col-angular {
 
-    @include mq($from: tablet) {
+	@include mq($from: tablet) {
 
-    	width: 0%;
-
+		position:absolute;
+	
 	}
-
 
 	.angular {
 
@@ -165,22 +196,20 @@
 
 		background-position: 20% 0%;
 
-		height:208px;
-		width:205px;
+		height:108px;
+		width:108px;
 
 		-webkit-animation-delay: 1s;
 	    animation-delay: 1s;
 
 		@include mq($from: tablet) {
 
-				margin-top: -122px;
-				margin-left: 330px;
-				opacity:0.95;
-				z-index:100;
-
+			top: -122px;
+			left: 330px;
+			opacity:0.95;
+			z-index:100;
 
 		}
-
 
 		&:hover {
 
@@ -190,14 +219,13 @@
 
 	}
 
-
 }
 
 .col-js {
 
 	@include mq($from: tablet) {
 
-		width:32%;
+		position:absolute;
 
 	}
 
@@ -210,12 +238,12 @@
 
 		font-size: 7.5rem;
 
-		height:369px;
-		width:369px;
-
+		height:269px;
+		width:269px;
 
 		@include mq($from: tablet) {
 
+			left: 97px;
 			opacity:0.95;
 			z-index:0;
 
@@ -237,10 +265,10 @@
 
 	@include mq($from: tablet) {
 
-		width:26%;
+		position:absolute;
 
 	}
-
+	
 	.css {
 
 		-webkit-animation-delay: 6s;
@@ -250,12 +278,12 @@
 
 		font-size: 4rem;
 
-		height:317px;
-		width:317px;
+		height:217px;
+		width:217px;
 
 		@include mq($from: tablet) {
 
-			margin-top:190px;
+			top:190px;
 			opacity:0.95;
 			z-index:50;
 
@@ -273,21 +301,28 @@
 
 .col-html {
 
+	@include mq($from: tablet) {
+
+		position:absolute;
+
+	}
+
 	.html {
 
 		background-position: 22% 40%;
 
 		font-size: 3.5rem;
 
-		height:308px;
-		width:308px;
+		height:208px;
+		width:208px;
 
 		-webkit-animation-delay: 1.5s;
 	    animation-delay: 1.5s;
 
 	    @include mq($from: tablet) {
 
-			margin-top:110px;
+			top: 190px;
+    		left: 250px;
 			opacity:0.95;
 
 		}
@@ -306,22 +341,7 @@
 
 	.row-in {
 
-		// margin-top:75px;
 		margin-left:30px;
-
-	}
-
-
-	// .row-ai {
-
-	// 	margin-top:85px;
-
-	// }
-
-	.row-pe {
-
-		// margin-top:45px;
-		margin-left:90px;
 
 	}
 
@@ -331,7 +351,7 @@
 
 	@include mq($from: tablet) {
 
-   		width: 22%;
+		position:absolute;
 
 	}
 
@@ -344,8 +364,8 @@
 
 		font-size: 5.5rem;
 
-		height:216px;
-		width:216px;
+		height:116px;
+		width:116px;
 
 		-webkit-animation-delay: 5s;
 	    animation-delay: 5s;
@@ -353,6 +373,8 @@
 		@include mq($from: tablet) {
 
 			opacity:0.95;
+			left: 100px;
+    		top: 225px;
 
 		}
 
@@ -364,16 +386,16 @@
 
 		.bkg-color {
 
-			height:216px;
-			width:216px;
+			height:116px;
+			width:116px;
 			border-radius:50rem;
 
 			background-color:rgb(252,92,162);
 
 			@include mq($from: tablet) {
 
-				height:216px;
-				width:216px;
+				height:116px;
+				width:116px;
 
 			}
 
@@ -393,7 +415,7 @@
 
 	@include mq($from: tablet) {
 
-		width:53%;
+		position:absolute;
 
 	}
 
@@ -406,16 +428,17 @@
 
 		font-size: 5.5rem;
 
-		height:269px;
-		width:269px;
+		height:169px;
+		width:169px;
 
 		-webkit-animation-delay: 6.5s;
 	    animation-delay: 6.5s;
 
 		@include mq($from: tablet) {
 
-			margin-top:30px;
 			opacity:0.95;
+			left: 100px;
+    		top: 25px;
 
 		}
 
@@ -427,8 +450,8 @@
 
 		.bkg-color {
 
-			height:269px;
-			width:269px;
+			height:169px;
+			width:169px;
 			border-radius:50rem;
 
 			background-color:rgb(36,209,246);
@@ -449,7 +472,7 @@
 
 	@include mq($from: tablet) {
 
-    	width: 26%;
+		position:absolute;
 
 	}
 
@@ -462,19 +485,19 @@
 
 		font-size: 5.5rem;
 
-		height:269px;
-		width:269px;
+		height:169px;
+		width:169px;
 
 		-webkit-animation-delay: 4.5s;
 	    animation-delay: 4.5s;
 
 		@include mq($from: tablet) {
 
-			height:269px;
-			width:269px;
+			height:169px;
+			width:169px;
 			opacity:0.95;
 
-			margin-top:-185px;
+			// top:-185px;
 
 		}
 
@@ -489,8 +512,8 @@
 			border-radius:50rem;
 			background-color:rgb(249,137,36);
 
-			height:269px;
-			width:269px;
+			height:169px;
+			width:169px;
 
 
 			&:hover {
@@ -509,7 +532,7 @@
 
 	@include mq($from: tablet) {
 
-		width:56%;
+		position:absolute;
 
 	}
 
@@ -522,8 +545,8 @@
 
 		font-size: 5.5rem;
 
-		height:243px;
-		width:243px;
+		height:143px;
+		width:143px;
 
 		-webkit-animation-delay: 3.5s;
 	    animation-delay: 3s;
@@ -532,7 +555,8 @@
 		@include mq($from: tablet) {
 
 			opacity:0.95;
-			margin-top:-82px;
+			top: 100px;
+    		left: 25px;
 
 		}
 
@@ -544,8 +568,8 @@
 
 		.bkg-color {
 
-			height:243px;
-			width:243px;
+			height:143px;
+			width:143px;
 			border-radius:50rem;
 
 			background-color:rgb(208,162,255);
@@ -566,7 +590,7 @@
 
 	@include mq($from: tablet) {
 
-    	width: 21%;
+		position:absolute;
 
 	}
 
@@ -579,8 +603,8 @@
 
 		font-size: 5.5rem;
 
-		height:216px;
-		width:216px;
+		height:116px;
+		width:116px;
 
 		-webkit-animation-delay: 2s;
 	    animation-delay: 2s;
@@ -588,7 +612,8 @@
 		@include mq($from: tablet) {
 
 			opacity:0.95;
-			margin-top:-150px;
+			top: 150px;
+    		left: 125px;
 
 		}
 
@@ -600,8 +625,8 @@
 
 		.bkg-color {
 
-			height:216px;
-			width:216px;
+			height:116px;
+			width:116px;
 			border-radius:50rem;
 
 			background-color:rgb(221,128,255);
@@ -623,7 +648,7 @@
 
 	@include mq($from: tablet) {
 
-		width:30%;
+		position:absolute;
 
 	}
 
@@ -636,8 +661,8 @@
 
 		font-size: 5.5rem;
 
-		height:216px;
-		width:216px;
+		height:116px;
+		width:116px;
 
 		-webkit-animation-delay: 1.5s;
 	    animation-delay: 1.5s;
@@ -645,7 +670,8 @@
 		@include mq($from: tablet) {
 
 			opacity:0.95;
-			margin-top:-110px;
+			top: 200px;
+    		left: 50px;
 
 		}
 
@@ -657,8 +683,8 @@
 
 		.bkg-color {
 
-			height:216px;
-			width:216px;
+			height:116px;
+			width:116px;
 			border-radius:50rem;
 
 			background-color:rgb(36,220,199);
@@ -679,10 +705,9 @@
 
 	@include mq($from: tablet) {
 
-		width:0%;
+		position:absolute;
 
 	}
-
 
 	.git {
 
@@ -691,16 +716,16 @@
 
 		font-size: 1.5rem;
 
-		width:198px;
-		height:196px;
+		width:98px;
+		height:98px;
 
 		-webkit-animation-delay: 3.5s;
 	    animation-delay: 3.5s;
 
 		@include mq($from: tablet) {
 
-			margin-top:-110px;
-			margin-left:620px;
+			// top:-110px;
+			// left:620px;
 
 		}
 
@@ -719,10 +744,9 @@
 
 	@include mq($from: tablet) {
 
-		width:0%;
+		position:absolute;
 
 	}
-
 
 	.gulp {
 
@@ -731,15 +755,16 @@
 
 		font-size: 1.5rem;
 
-		width:198px;
-		height:196px;
+		width:98px;
+		height:98px;
 
 		-webkit-animation-delay: 1s;
 	    animation-delay: 1s;
 
 		@include mq($from: tablet) {
 
-			margin-left:550px;
+			top: 75px;
+    		left: 50px;
 
 		}
 
@@ -758,10 +783,9 @@
 
 	@include mq($from: tablet) {
 
-		width:0%;
+		position:absolute;
 
 	}
-
 
 	.bower {
 
@@ -770,15 +794,16 @@
 
 		font-size: 1.5rem;
 
-		width:128px;
-		height:128px;
+		width:78px;
+		height:78px;
 
 		-webkit-animation-delay: 2s;
 	    animation-delay: 2s;
 
 		@include mq($from: tablet) {
 
-			margin-left:650px;
+			left: 75px;
+    		top: 20px;
 
 		}
 
@@ -797,7 +822,7 @@
 
 	@include mq($from: tablet) {
 
-		width:30%;
+		position:absolute;
 
 	}
 
@@ -810,8 +835,8 @@
 
 		font-size: 2.5rem;
 
-		height:248px;
-		width:245px;
+		height:148px;
+		width:148px;
 
 		-webkit-animation-delay: 1.5s;
 	    animation-delay: 1.5s;
@@ -830,8 +855,8 @@
 
 		.bkg-color {
 
-			height:248px;
-			width:245px;
+			height:148px;
+			width:148px;
 			border-radius:50rem;
 
 			background-color:#80878b;
@@ -852,7 +877,7 @@
 
 	@include mq($from: tablet) {
 
-		width:30%;
+		position:absolute;
 
 	}
 
@@ -863,10 +888,10 @@
 
 		background-position: 40% 50%;
 
-		font-size: 2.5rem;
+		font-size: 1.5rem;
 
-		height:200px;
-		width:197px;
+		height:100px;
+		width:100px;
 
 		-webkit-animation-delay: 2s;
 	    animation-delay: 2s;
@@ -874,6 +899,8 @@
 		@include mq($from: tablet) {
 
 			opacity:0.95;
+			left: 100px;
+    		top: 75px;
 
 		}
 
@@ -885,8 +912,8 @@
 
 		.bkg-color {
 
-			height:200px;
-			width:197px;
+			height:100px;
+			width:100px;
 			border-radius:50rem;
 
 			background-color:#6d634c;
@@ -907,28 +934,26 @@
 
 	@include mq($from: tablet) {
 
-		width:0%;
+		position:absolute;
 
 	}
-
 
 	.java {
 
 
 		background-position: 20% 20%;
 
-		font-size: 3rem;
+		font-size: 2frem;
 
-		width:258px;
-		height:258px;
+		width:158px;
+		height:158px;
 
 		-webkit-animation-delay: 1s;
 	    animation-delay: 1s;
 
 		@include mq($from: tablet) {
 
-			margin-top:-150px;
-			margin-left: 100px;
+			left: 75px;
 
 		}
 
@@ -941,8 +966,8 @@
 
 		.bkg-color {
 
-			width:258px;
-			height:258px;
+			width:158px;
+			height:158px;
 			border-radius:50rem;
 
 			background-color:#E01E21;
@@ -963,27 +988,27 @@
 
 	@include mq($from: tablet) {
 
-		width:0%;
+		position:absolute;
 
 	}
-
 
 	.objective {
 
 
 		background-position: 0% 20%;
 
-		font-size: 3rem;
+		font-size: 2frem;
 
-		width:258px;
-		height:258px;
+		width:158px;
+		height:158px;
 
 		-webkit-animation-delay: 3.5s;
 	    animation-delay: 3.5s;
 
 		@include mq($from: tablet) {
 
-			margin-left:0px;
+			left: 0;
+    		top: 100px;
 
 		}
 
@@ -996,8 +1021,8 @@
 
 		.bkg-color {
 
-			width:258px;
-			height:258px;
+			width:158px;
+			height:158px;
 			border-radius:50rem;
 
 			background-color:#55A1FF;
@@ -1018,27 +1043,27 @@
 
 	@include mq($from: tablet) {
 
-		width:0%;
+		position:absolute;
 
 	}
-
 
 	.swift {
 
 
 		background-position: 30% 10%;
 
-		font-size: 3rem;
+		font-size: 2frem;
 
-		width:258px;
-		height:258px;
+		width:158px;
+		height:158px;
 
 		-webkit-animation-delay: 2.5s;
 	    animation-delay: 2.5s;
 
 		@include mq($from: tablet) {
 
-			margin-left: 150px;
+			left: 150px;
+    		top: 100px;
 
 		}
 
@@ -1051,8 +1076,8 @@
 
 		.bkg-color {
 
-			width:258px;
-			height:258px;
+			width:158px;
+			height:158px;
 			border-radius:50rem;
 
 			background-color:#FF7043;

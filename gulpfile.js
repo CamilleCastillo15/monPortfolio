@@ -41,12 +41,12 @@ var del          = require('del');
 gulp.task('browser-sync', function() {
 	browserSync({
 
-		/* ========================
-		 * RENSEIGNER LE VHOST ICI 
-		 * ======================== */
+		 // ========================
+		 // * RENSEIGNER LE VHOST ICI 
+		 // * ======================== 
 
 		proxy: "monsite.dev",
-		open: true
+		open: false
 		
 	});
 });
