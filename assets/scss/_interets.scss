@@ -1,22 +1,32 @@
 .interets-part{
 
-	.col-1-3 {
-
-		@include mq($from: tablet) {
-			padding:0;
-		}
-
-	}
-
 	visibility:hidden;
 
 }
 
 .interets {
 
+		@include mq($from: tablet) {
+			margin: 0;
+		}
+
+		margin: 2rem auto;
+
+		position:relative;
+
+		background-repeat:no-repeat;
+		background-position: center top;
+		@include transition(1s, ease-in-out);
+		border-radius:50rem;
+
+		// -webkit-animation: moveclouds 15s linear infinite, sideWays 4s ease-in-out infinite alternate; /* 
+		// Chrome, Safari, Opera */
+	    -webkit-animation: bubble 2s linear infinite, 4s cubic-bezier(0.420, 0.000, 0.580, 1.000);  
+	    animation-direction:reverse;
+
 		&.img {
 
-			background-image: url(../images/header/photo_banniere_portfolio.jpg);
+			background-image: url(../images/header/photo_banniere_portfolio_v2_tiny.jpg);
 
 		}
 
@@ -32,25 +42,13 @@
 		    color: #f5f0f0;
 		    mix-blend-mode: overlay;
 		    
-		    letter-spacing: 0.75rem;
+		    letter-spacing: 0.5rem;
 		    width: 100%;
     		text-align: center;
 			
 			@include transition(1s, ease-in-out);
 
 		}
-
-		position:relative;
-
-		background-repeat:no-repeat;
-		background-position: center top;
-		@include transition(1s, ease-in-out);
-		border-radius:50rem;
-
-		// -webkit-animation: moveclouds 15s linear infinite, sideWays 4s ease-in-out infinite alternate; /* 
-		// Chrome, Safari, Opera */
-	    -webkit-animation: bubble 2s linear infinite, 4s cubic-bezier(0.420, 0.000, 0.580, 1.000);  
-	    animation-direction:reverse;
 
 		&:hover {
 
@@ -94,7 +92,6 @@
 			}
 
 	    }
-
 }
 
 .interets.crea {
@@ -195,12 +192,15 @@
 
 		@include delay(1s);
 
+		display: none;
+
 		@include mq($from: tablet) {
 
 			top: -122px;
 			left: 330px;
 			opacity:0.95;
 			z-index:100;
+			display: block;
 
 		}
 
@@ -359,11 +359,14 @@
 
 		@include delay(5s);
 
+		display: none;
+
 		@include mq($from: tablet) {
 
 			opacity:0.95;
 			left: 100px;
     		top: 225px;
+    		display: block;
 
 		}
 
@@ -537,11 +540,14 @@
 
 		@include delay(3.5s);	
 
+		display: none;
+
 		@include mq($from: tablet) {
 
 			opacity:0.95;
 			top: 100px;
     		left: 25px;
+    		display: block;
 
 		}
 
@@ -593,11 +599,15 @@
 
 		@include delay(2s);
 
+		display: none;
+
 		@include mq($from: tablet) {
 
 			opacity:0.95;
 			top: 150px;
     		left: 125px;
+
+    		display: block;
 
 		}
 
@@ -650,11 +660,14 @@
 
 		@include delay(1.5s);
 
+		display: none;
+
 		@include mq($from: tablet) {
 
 			opacity:0.95;
 			top: 200px;
     		left: 50px;
+    		display: block;
 
 		}
 
@@ -780,10 +793,13 @@
 
 		@include delay(2s);
 
+		display: none;
+
 		@include mq($from: tablet) {
 
 			left: 75px;
     		top: 20px;
+    		display: block;
 
 		}
 
